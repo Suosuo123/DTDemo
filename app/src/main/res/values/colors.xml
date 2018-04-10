@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/main_gray</color>
+    <color name="colorPrimaryDark">@color/main_gray</color>
+    <color name="colorAccent">@color/main_gray</color>
+
+    <color name="main_gray">#f7f7f7</color>
+
+    <color name="main_orange">#FF8549</color>
+    <color name="main_orange_dark">#e05d34</color>
+
+    <color name="black">#000000</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="white">#ffffff</color>
+    <color name="half_transparent">#28000000</color>
+
+    <color name="color_pressed">#9c000000</color>
+    <color name="ripple_color">#ffeeeeee</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="primary">#00BCD4</color>
+    <color name="primary_dark">#0097A7</color>
+    <color name="primary_light">#B2EBF2</color>
+    <color name="accent">#61B3DD</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="gray">#cccccc</color>
+    <color name="gray_little">#FAFAFA</color>
+
+    <color name="text_gray">#7A7A7A</color>
+    <color name="text_blue">#5186A5</color>
+
+    <color name="slide_1">#4f91ff</color>
+    <color name="slide_2">#fb9c25</color>
+    <color name="slide_3">#5ab55d</color>
+    <color name="slide_4">#ea2d6d</color>
+
+    <color name="transparent_60_gray">#60CCCCCC</color>
+
+    <color name="red1">#cb2329</color>
+
+    <color name="bocop_dialog_bg">#77000000</color>
+    <color name="color_transparent">#00000000</color>
+    <color name="color_e84515">#e84515</color>
+    <color name="color_d8d8d8">#d8d8d8</color>
+    <color name="color_323232">#323232</color>
+
+    <color name="huise">#c9cbcd</color>
+
+    <color name="province_line_border">#D0D0D0</color>
+
+    <color name="text_blue1">#387AD3</color>
+
+    <color name="red">#e28889</color>
+
+
+</resources>

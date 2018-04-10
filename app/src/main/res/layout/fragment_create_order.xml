@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/iv_currency"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:gravity="right"
+        android:text="交易货币：人民币"
+        android:textColor="#FF787878"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="#DDDDDD" />
+
+    <com.dhgate.dt.demo.widget.swipeMenuListView.MySwipeMenuListView
+        android:id="@+id/lv_product"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/tv_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/img_add" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <TextView
+                android:id="@+id/iv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="总价"
+                android:textColor="#FF3B3C3F"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="¥28"
+                android:textColor="#FFCD2021"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
