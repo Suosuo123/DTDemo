@@ -8,11 +8,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
+import com.dhgate.dt.demo.activity.EditProductActivity;
 import com.dhgate.dt.demo.activity.ProductListActivity;
 import com.dhgate.dt.demo.utils.CommonUtils;
 import com.dhgate.dt.demo.widget.WinToast;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 public class AddProductFragment extends BaseFragment {
 
@@ -28,6 +30,12 @@ public class AddProductFragment extends BaseFragment {
 
     @Bind(R.id.et_search)
     public EditText et_search;
+
+    @OnClick(R.id.iv_add)
+    public void addClick() {
+        Intent intent = new Intent(mActivity, EditProductActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void initView() {

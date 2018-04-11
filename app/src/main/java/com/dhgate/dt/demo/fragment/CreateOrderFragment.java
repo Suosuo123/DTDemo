@@ -1,5 +1,6 @@
 package com.dhgate.dt.demo.fragment;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.AbsListView;
@@ -7,6 +8,7 @@ import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.activity.CreateOrderActivity;
+import com.dhgate.dt.demo.activity.EditProductActivity;
 import com.dhgate.dt.demo.adapter.CreateOrderProductListAdapter;
 import com.dhgate.dt.demo.entity.Product;
 import com.dhgate.dt.demo.utils.CommonUtils;
@@ -21,6 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
+import butterknife.OnClick;
 
 public class CreateOrderFragment extends BaseFragment {
 
@@ -43,6 +46,12 @@ public class CreateOrderFragment extends BaseFragment {
 
     @Bind(R.id.tv_money)
     public TextView tv_money;
+
+    @OnClick(R.id.iv_add)
+    public void addClick() {
+        Intent intent = new Intent(mActivity, EditProductActivity.class);
+        startActivity(intent);
+    }
 
     private CreateOrderProductListAdapter mAdapter;
     private List<Product> mList = new ArrayList<>();

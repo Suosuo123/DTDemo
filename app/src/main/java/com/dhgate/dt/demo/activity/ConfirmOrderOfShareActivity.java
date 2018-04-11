@@ -1,9 +1,10 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
+
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.adapter.ConfirmOrderProductListAdapter;
 import com.dhgate.dt.demo.entity.Product;
-import com.dhgate.dt.demo.widget.WinToast;
 import com.dhgate.dt.demo.widget.WrapContentListView;
 
 import java.util.ArrayList;
@@ -20,12 +21,12 @@ public class ConfirmOrderOfShareActivity extends BaseActivity {
 
     @OnClick(R.id.btn_edit)
     public void editClick() {
-        WinToast.toast(mActivity,"修改");
     }
 
     @OnClick(R.id.btn_confirm)
     public void confirmClick() {
-        WinToast.toast(mActivity,"确认");
+        Intent intent=new Intent(mActivity,OrderManagementActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -49,7 +50,7 @@ public class ConfirmOrderOfShareActivity extends BaseActivity {
     protected void initView() {
         super.initView();
 
-        setActionTitle("订单");
+        setActionTitle("确认订单");
 
         mAdapter = new ConfirmOrderProductListAdapter(mActivity);
         lv_product.setAdapter(mAdapter);
