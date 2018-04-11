@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -289,12 +289,13 @@ public class CreateOrderActivity extends BaseActivity {
     private void initViewpager(int productNum) {
         LogUtils.d(productNum);
 
+        mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(mPagerAdapter);
+
         mFragments.clear();
         mFragments.add(CreateOrderFragment.newInstance(productNum));
         mFragments.add(ProductsManagementFragment.newInstance(10));
 
-        mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
-        viewPager.setAdapter(mPagerAdapter);
         mPagerAdapter.update(mFragments);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -331,7 +332,7 @@ public class CreateOrderActivity extends BaseActivity {
     }
 
 
-    private class MyPagerAdapter extends FragmentPagerAdapter {
+    private class MyPagerAdapter extends FragmentStatePagerAdapter {
 
         private List<Fragment> list = new ArrayList<>();
 
@@ -353,6 +354,12 @@ public class CreateOrderActivity extends BaseActivity {
         @Override
         public Fragment getItem(int position) {
             return list.get(position);
+        }
+
+        @Override
+        public int getItemPosition(Object object) {
+            // TODO Auto-generated method stub
+            return PagerAdapter.POSITION_NONE;
         }
 
     }
@@ -643,13 +650,13 @@ public class CreateOrderActivity extends BaseActivity {
     public void changePageToOrder(int addCount) {
         ORDER_PRODUCT_COUNT+=addCount;
 
-        FragmentManager fm = getSupportFragmentManager();
-        FragmentTransaction transaction = fm.beginTransaction();
-        //把所有缓存碎片都删了。
-        for (Fragment childFragment : fm.getFragments()) {
-            transaction.remove(childFragment);
-        }
-        transaction.commit();
+//        FragmentManager fm = getSupportFragmentManager();
+//        FragmentTransaction transaction = fm.beginTransaction();
+//        //把所有缓存碎片都删了。
+//        for (Fragment childFragment : fm.getFragments()) {
+//            transaction.remove(childFragment);
+//        }
+//        transaction.commit();
 
         initView();
     }

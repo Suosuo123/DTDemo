@@ -52,7 +52,6 @@ public class CreateOrderFragment extends BaseFragment {
     private int mTotalPrice = 0;
 
 
-
     @Override
     protected void initView() {
 
@@ -65,12 +64,9 @@ public class CreateOrderFragment extends BaseFragment {
         mAdapter = new CreateOrderProductListAdapter(mActivity);
         lv_product.setAdapter(mAdapter);
 
-        LogUtils.d(mTotalCount+"");
-
         for (int i = 0; i < mTotalCount; i++) {
             mList.add(new Product());
         }
-
         mAdapter.bindData(mList);
 
 
@@ -94,7 +90,6 @@ public class CreateOrderFragment extends BaseFragment {
         lv_product.setOnMenuItemClickListener(new SwipeMenuListView.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(int position, SwipeMenu menu, int index) {
-                LogUtils.d(position);
                 switch (index) {
                     case 0:// delete
                         mAdapter.removeOneItem(position);
@@ -105,6 +100,7 @@ public class CreateOrderFragment extends BaseFragment {
                 return false;
             }
         });
+
     }
 
     @Override

@@ -115,10 +115,10 @@ public abstract class BaseActivity extends SwipeBackActivity {
     private void initWindow() {
 
         Window window = getWindow();
-        if (android.os.Build.VERSION.SDK_INT >= 19) {
+        if (Build.VERSION.SDK_INT >= 19) {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
-        if (android.os.Build.VERSION.SDK_INT >= 21) {
+        if (Build.VERSION.SDK_INT >= 21) {
             window.setStatusBarColor(getColor(R.color.main_gray));
             window.setNavigationBarColor(getColor(R.color.main_gray));
         } else {
