@@ -14,4 +14,9 @@
         <item name="shadow_right">@mipmap/shadow_right</item>
         <item name="shadow_bottom">@mipmap/shadow_bottom</item>
     </style>
+
+    <style name="EditTextUnderline" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#DDDDDD</item>
+        <item name="colorControlActivated">#DDDDDD</item>
+    </style>
 </resources>
