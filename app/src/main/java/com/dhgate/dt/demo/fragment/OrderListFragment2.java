@@ -7,49 +7,34 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
-import com.dhgate.dt.demo.activity.CreateOrderActivity;
-import com.dhgate.dt.demo.adapter.ProductManagementListAdapter;
-import com.dhgate.dt.demo.entity.Product;
-import com.dhgate.dt.demo.widget.WinToast;
+import com.dhgate.dt.demo.adapter.OrderListAdapter2;
+import com.dhgate.dt.demo.entity.Order2;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.OnClick;
 
-public class ProductsManagementFragment extends BaseFragment {
+public class OrderListFragment2 extends BaseFragment {
 
-
-    public static ProductsManagementFragment newInstance(int count) {
-        ProductsManagementFragment f = new ProductsManagementFragment();
+    public static OrderListFragment2 newInstance() {
+        OrderListFragment2 f = new OrderListFragment2();
         Bundle bundle = new Bundle();
-        bundle.putInt("count", count);
         f.setArguments(bundle);
         return f;
     }
 
     @Override
     protected int setLayout() {
-        return R.layout.fragment_product_management;
+        return R.layout.fragment_order_list2;
     }
 
     @Bind(R.id.lv_product)
     public ListView lv_product;
 
-    @OnClick(R.id.tv_add_to_order)
-    public void addToOrderClick() {
-        if (lv_product.getCheckedItemCount() <= 0) {
-            WinToast.toast(mActivity, "请选择商品");
-            return;
-        }
 
-        ((CreateOrderActivity) mActivity).changePageToOrder(lv_product.getCheckedItemCount());
-    }
-
-
-    private ProductManagementListAdapter mAdapter;
-    private List<Product> mList = new ArrayList<>();
+    private OrderListAdapter2 mAdapter;
+    private List<Order2> mList = new ArrayList<>();
 
     private int mTotalCount = 3;
 
@@ -57,15 +42,22 @@ public class ProductsManagementFragment extends BaseFragment {
     @Override
     protected void initView() {
 
+
         mTotalCount = getArguments().getInt("count", mTotalCount);
 
-        mAdapter = new ProductManagementListAdapter(mActivity, lv_product);
+        mAdapter = new OrderListAdapter2(mActivity, lv_product);
         lv_product.setAdapter(mAdapter);
         lv_product.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
 
-        for (int i = 0; i < mTotalCount; i++) {
-            mList.add(new Product());
-        }
+        Order2 order1 = new Order2("文件制作", "自送");
+        Order2 order2 = new Order2("放行", "陆运");
+        Order2 order3 = new Order2("资金解冻申请", "海运");
+        Order2 order4 = new Order2("完结", "空运");
+
+        mList.add(order1);
+        mList.add(order2);
+        mList.add(order3);
+        mList.add(order4);
 
         mAdapter.updateList(mList);
 

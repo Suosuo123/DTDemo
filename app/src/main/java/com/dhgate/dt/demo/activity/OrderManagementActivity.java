@@ -9,7 +9,9 @@ import android.util.TypedValue;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.fragment.AddProductFragment;
-import com.dhgate.dt.demo.fragment.CreateOrderFragment;
+import com.dhgate.dt.demo.fragment.OrderListFragment1;
+import com.dhgate.dt.demo.fragment.OrderListFragment2;
+import com.dhgate.dt.demo.utils.CommonUtils;
 import com.dhgate.dt.demo.widget.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
@@ -46,8 +48,8 @@ public class OrderManagementActivity extends BaseActivity {
         super.initView();
 
         mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
-        mFragments.add(AddProductFragment.newInstance());
-        mFragments.add(AddProductFragment.newInstance());
+        mFragments.add(OrderListFragment1.newInstance());
+        mFragments.add(OrderListFragment2.newInstance());
         mViewPager.setAdapter(mPagerAdapter);
         mPagerAdapter.update(mFragments);
 
@@ -66,19 +68,20 @@ public class OrderManagementActivity extends BaseActivity {
      */
     private void initTabsValue() {
         // 底部游标颜色
-        mPagerSlidingTabStrip.setIndicatorColor(getResources().getColor(R.color.main_orange_dark));
+        mPagerSlidingTabStrip.setIndicatorColor(getResources().getColor(R.color.text_blue1));
         // tab的分割线颜色
         mPagerSlidingTabStrip.setDividerColor(Color.TRANSPARENT);
         // tab背景
-        mPagerSlidingTabStrip.setBackgroundColor(getResources().getColor(R.color.main_orange));
+        mPagerSlidingTabStrip.setBackgroundColor(getResources().getColor(R.color.white));
         // tab底线高度
         mPagerSlidingTabStrip.setUnderlineHeight((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 1, getResources().getDisplayMetrics()));
         // 游标高度
-        mPagerSlidingTabStrip.setIndicatorHeight((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 4, getResources().getDisplayMetrics()));
+        mPagerSlidingTabStrip.setIndicatorHeight((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics()));
         // 选中的文字颜色
-        mPagerSlidingTabStrip.setSelectedTextColor(Color.WHITE);
+        mPagerSlidingTabStrip.setSelectedTextColor(getResources().getColor(R.color.text_blue1));
         // 正常文字颜色
-        mPagerSlidingTabStrip.setTextColor(Color.BLACK);
+        mPagerSlidingTabStrip.setTextColor(getResources().getColor(R.color.text_gray));
+        mPagerSlidingTabStrip.setTextSize(CommonUtils.dip2pixel(mActivity,15));
     }
 
     private class MyPagerAdapter extends FragmentPagerAdapter {

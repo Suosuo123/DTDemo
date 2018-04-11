@@ -13,5 +13,6 @@ public class PaymentActivity extends BaseActivity {
     @Override
     protected void onCreate() {
         super.onCreate();
+        setActionTitle("订单支付");
     }
 }
