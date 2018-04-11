@@ -1,10 +1,7 @@
 package com.dhgate.dt.demo.activity;
 
-import android.widget.ImageView;
-
+import android.content.Intent;
 import com.dhgate.dt.demo.R;
-
-import butterknife.Bind;
 import butterknife.OnClick;
 
 /**
@@ -15,7 +12,8 @@ public class PaymentActivity extends BaseActivity {
 
     @OnClick(R.id.confirm_payment_btn)
     public void onConfirmClick() {
-
+        Intent intent = new Intent(PaymentActivity.this, EnterPaymentPwdActivity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -1,5 +1,7 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
+
 import com.dhgate.dt.demo.R;
 import com.jungly.gridpasswordview.GridPasswordView;
 
@@ -31,7 +33,8 @@ public class EnterPaymentPwdActivity extends BaseActivity {
 
             @Override
             public void onInputFinish(String psw) {
-                // add your code here
+                Intent intent = new Intent(EnterPaymentPwdActivity.this, PaymentSuccessActivity.class);
+                startActivity(intent);
             }
         });
     }
