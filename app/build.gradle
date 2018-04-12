@@ -26,6 +26,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.jakewharton:butterknife:7.0.1'
     compile project(path: ':pickerview')
+    compile 'com.jungly:gridPasswordView:0.3'
 
     //基于安卓MD风格的dialog，可以适配到android-8
     compile 'com.afollestad.material-dialogs:core:0.9.1.0'
