@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.activity.PaymentActivity;
+import com.dhgate.dt.demo.activity.SendApplyActivity;
 import com.dhgate.dt.demo.entity.Order1;
 import com.dhgate.dt.demo.widget.WinToast;
 
@@ -91,7 +92,8 @@ public class OrderListAdapter1 extends BaseAdapter {
                 Intent intent = new Intent(mContext, PaymentActivity.class);
                 mContext.startActivity(intent);
             } else if (tv_action2.getText().equals("送仓申请")) {
-                WinToast.toast(mContext, "送仓申请");
+                Intent intent = new Intent(mContext, SendApplyActivity.class);
+                mContext.startActivity(intent);
             }
         }
     }

@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.activity.MakeLogisticsFormActivity;
+import com.dhgate.dt.demo.activity.OrderDetailActivity;
 import com.dhgate.dt.demo.adapter.OrderListAdapter1;
 import com.dhgate.dt.demo.entity.Order1;
 import com.dhgate.dt.demo.entity.Product;
@@ -86,7 +87,8 @@ public class OrderListFragment1 extends BaseFragment {
         lv_product.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mAdapter.notifyDataSetChanged();
+                Intent intent = new Intent(mActivity, OrderDetailActivity.class);
+                startActivity(intent);
             }
         });
     }
