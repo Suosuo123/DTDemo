@@ -10,9 +10,8 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
-import com.dhgate.dt.demo.adapter.ProductListAdapter;
+import com.dhgate.dt.demo.adapter.SelectProductListAdapter;
 import com.dhgate.dt.demo.entity.Product;
-import com.dhgate.dt.demo.utils.log.LogUtils;
 import com.dhgate.dt.demo.widget.WinToast;
 
 import java.util.ArrayList;
@@ -21,7 +20,7 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-public class ProductListActivity extends BaseActivity {
+public class SelectProductListActivity extends BaseActivity {
 
 
     @Override
@@ -52,7 +51,7 @@ public class ProductListActivity extends BaseActivity {
         startActivity(intent);
     }
 
-    private ProductListAdapter madAdapter;
+    private SelectProductListAdapter madAdapter;
     private List<Product> mList = new ArrayList<>();
 
     private String mKey;
@@ -67,7 +66,7 @@ public class ProductListActivity extends BaseActivity {
             et_search.setSelection(mKey.length());
         }
 
-        madAdapter = new ProductListAdapter(mActivity, lv_product);
+        madAdapter = new SelectProductListAdapter(mActivity, lv_product);
         lv_product.setAdapter(madAdapter);
         lv_product.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
 

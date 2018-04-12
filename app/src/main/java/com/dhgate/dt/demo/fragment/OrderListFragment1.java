@@ -1,5 +1,6 @@
 package com.dhgate.dt.demo.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
@@ -7,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
+import com.dhgate.dt.demo.activity.MakeLogisticsFormActivity;
 import com.dhgate.dt.demo.adapter.OrderListAdapter1;
 import com.dhgate.dt.demo.entity.Order1;
 import com.dhgate.dt.demo.entity.Product;
@@ -42,6 +44,8 @@ public class OrderListFragment1 extends BaseFragment {
             WinToast.toast(mActivity, "请选择订单");
             return;
         }
+        Intent intent = new Intent(mActivity, MakeLogisticsFormActivity.class);
+        startActivity(intent);
     }
 
 

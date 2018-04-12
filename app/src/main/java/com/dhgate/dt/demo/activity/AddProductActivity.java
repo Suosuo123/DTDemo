@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.fragment.AddProductFragment;
+import com.dhgate.dt.demo.fragment.ProductsManagementFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,14 +36,14 @@ public class AddProductActivity extends BaseActivity implements ViewPager.OnPage
     public void leftClick() {
         iv_left.setImageResource(R.mipmap.left_selected);
         iv_right.setImageResource(R.mipmap.right_normal);
-        viewPager.setCurrentItem(0,true);
+        viewPager.setCurrentItem(0, true);
     }
 
     @OnClick(R.id.iv_right)
     public void rightClick() {
         iv_left.setImageResource(R.mipmap.left_normal);
         iv_right.setImageResource(R.mipmap.right_selected);
-        viewPager.setCurrentItem(1,true);
+        viewPager.setCurrentItem(1, true);
     }
 
     private MyPagerAdapter mPagerAdapter;
@@ -56,7 +57,7 @@ public class AddProductActivity extends BaseActivity implements ViewPager.OnPage
 
         mFragments = new ArrayList<>();
         mFragments.add(AddProductFragment.newInstance());
-        mFragments.add(AddProductFragment.newInstance());
+        mFragments.add(ProductsManagementFragment.newInstance(10));
         mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mPagerAdapter);
         viewPager.addOnPageChangeListener(this);
