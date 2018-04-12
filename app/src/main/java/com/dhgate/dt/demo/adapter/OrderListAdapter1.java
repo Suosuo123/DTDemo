@@ -1,6 +1,7 @@
 package com.dhgate.dt.demo.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
+import com.dhgate.dt.demo.activity.PaymentActivity;
 import com.dhgate.dt.demo.entity.Order1;
 import com.dhgate.dt.demo.widget.WinToast;
 
@@ -86,7 +88,8 @@ public class OrderListAdapter1 extends BaseAdapter {
         @OnClick(R.id.tv_action2)
         public void payClick() {
             if (tv_action2.getText().equals("付款")) {
-                WinToast.toast(mContext, "付款");
+                Intent intent = new Intent(mContext, PaymentActivity.class);
+                mContext.startActivity(intent);
             } else if (tv_action2.getText().equals("送仓申请")) {
                 WinToast.toast(mContext, "送仓申请");
             }
