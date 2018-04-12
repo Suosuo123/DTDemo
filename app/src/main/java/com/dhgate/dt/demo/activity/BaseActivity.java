@@ -52,6 +52,10 @@ public abstract class BaseActivity extends SwipeBackActivity {
         finish();
     }
 
+    @Nullable
+    @Bind(R.id.iv_right)
+    public UIImageView iv_right;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,6 +123,13 @@ public abstract class BaseActivity extends SwipeBackActivity {
             }
         }
 
+    }
+
+    public void setRightImg(int drawableId) {
+        if (iv_right != null) {
+            iv_right.setVisibility(View.VISIBLE);
+            iv_right.setImageResource(drawableId);
+        }
     }
 
 

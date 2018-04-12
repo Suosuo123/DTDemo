@@ -60,12 +60,7 @@
         <activity
             android:name=".activity.OrderManagementActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.EditProductActivity"
@@ -87,6 +82,7 @@
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait"></activity>
 
+
         <activity
             android:name=".activity.EnterPaymentPwdActivity"
             android:configChanges="orientation|screenSize|locale"
@@ -94,6 +90,21 @@
 
         <activity
             android:name=".activity.PaymentSuccessActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.MyAccountActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.USDAccountActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait"></activity>
     </application>

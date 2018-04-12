@@ -30,4 +30,16 @@
         android:text="title"
         android:textSize="18sp" />
 
+    <com.dhgate.dt.demo.widget.uiView.UIImageView
+        android:id="@+id/iv_right"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        drakeet:color_pressed="@color/transparent_60_gray"
+        drakeet:shape_type="round"
+        android:padding="16dp"
+        android:visibility="gone"/>
+
 </RelativeLayout>
