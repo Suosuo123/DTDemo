@@ -78,10 +78,10 @@
         <activity android:name=".activity.PaymentActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
 
         <activity android:name=".activity.EnterPaymentPwdActivity"
@@ -90,6 +90,20 @@
         </activity>
 
         <activity android:name=".activity.PaymentSuccessActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name=".activity.MyAccountActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.USDAccountActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait">
         </activity>
