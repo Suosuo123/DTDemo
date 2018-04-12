@@ -61,7 +61,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
         super.onCreate(savedInstanceState);
         mActivity = this;
 
-        initWindow();
+        initWindow(R.color.main_gray);
 
         setContentView(getLayoutId());
 
@@ -101,6 +101,16 @@ public abstract class BaseActivity extends SwipeBackActivity {
     }
 
     /**
+     * 设置actionbar颜色
+     */
+    public void setActionBarWhite() {
+        if (rel_bar != null) {
+            rel_bar.setBackgroundColor(getColor(R.color.white));
+        }
+        initWindow(R.color.white);
+    }
+
+    /**
      * 设置actionbar title
      *
      * @param title 页面标题
@@ -123,15 +133,15 @@ public abstract class BaseActivity extends SwipeBackActivity {
     }
 
 
-    private void initWindow() {
+    private void initWindow(int colorResId) {
 
         Window window = getWindow();
         if (Build.VERSION.SDK_INT >= 19) {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
         }
         if (Build.VERSION.SDK_INT >= 21) {
-            window.setStatusBarColor(getColor(R.color.main_gray));
-            window.setNavigationBarColor(getColor(R.color.main_gray));
+            window.setStatusBarColor(getColor(colorResId));
+            window.setNavigationBarColor(getColor(colorResId));
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);

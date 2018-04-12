@@ -29,12 +29,14 @@ public class MyAccountActivity extends BaseActivity {
 
     @OnClick(R.id.myaccount_img_4)
     public void onReceiveClick() {
-
+        Intent intent = new Intent(MyAccountActivity.this, AddProductActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.myaccount_img_5)
     public void onPayClick() {
-
+        Intent intent = new Intent(MyAccountActivity.this, AddProductActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.iv_pay_back)

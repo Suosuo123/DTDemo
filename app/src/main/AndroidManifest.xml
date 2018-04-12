@@ -34,7 +34,8 @@
         <activity
             android:name=".activity.AddProductActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden">
 
         </activity>
 
@@ -59,22 +60,12 @@
         <activity
             android:name=".activity.OrderManagementActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.EditProductActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.MakeLogisticsFormActivity"
@@ -89,33 +80,26 @@
         <activity
             android:name=".activity.SelectContactActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".activity.PaymentActivity"
+        <activity
+            android:name=".activity.PaymentActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".activity.EnterPaymentPwdActivity"
+
+        <activity
+            android:name=".activity.EnterPaymentPwdActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".activity.PaymentSuccessActivity"
+        <activity
+            android:name=".activity.PaymentSuccessActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
-        <activity android:name=".activity.MyAccountActivity"
+        <activity
+            android:name=".activity.MyAccountActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -124,7 +108,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.USDAccountActivity"
+        <activity
+            android:name=".activity.USDAccountActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait">
         </activity>

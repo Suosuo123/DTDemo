@@ -40,6 +40,7 @@ public class OrderManagementActivity extends BaseActivity {
     protected void onCreate() {
         super.onCreate();
 
+        setActionBarWhite();
         setActionTitle("订单管理");
     }
 

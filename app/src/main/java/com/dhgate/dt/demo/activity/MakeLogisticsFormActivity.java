@@ -130,10 +130,6 @@ public class MakeLogisticsFormActivity extends BaseActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == OPEN_SELECT_CODE && resultCode == RESULT_OK) {
-//            tv_select_contact1.setVisibility(View.GONE);
-//            tv_select_contact2.setVisibility(View.GONE);
-//            iv_select_contact1.setVisibility(View.VISIBLE);
-//            iv_select_contact2.setVisibility(View.VISIBLE);
 
             ll_select_contact.setVisibility(View.GONE);
             ll_select_contact1.setVisibility(View.VISIBLE);
