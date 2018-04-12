@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.activity.EditProductActivity;
-import com.dhgate.dt.demo.activity.ProductListActivity;
+import com.dhgate.dt.demo.activity.SelectProductListActivity;
 import com.dhgate.dt.demo.utils.CommonUtils;
 import com.dhgate.dt.demo.widget.WinToast;
 
@@ -54,7 +54,7 @@ public class AddProductFragment extends BaseFragment {
 
                     CommonUtils.hideInputMethod(mActivity);
 
-                    Intent intent = new Intent(mActivity, ProductListActivity.class);
+                    Intent intent = new Intent(mActivity, SelectProductListActivity.class);
                     intent.putExtra("key", key);
                     startActivity(intent);
                     return true;

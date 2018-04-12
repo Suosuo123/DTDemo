@@ -1,43 +1,50 @@
 package com.dhgate.dt.demo.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
-import com.dhgate.dt.demo.entity.Product;
+import com.dhgate.dt.demo.activity.SelectContactActivity;
+import com.dhgate.dt.demo.entity.Contact;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
-public class ProductListAdapter extends BaseAdapter {
+public class SelectContactListAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private Context mContext;
 
-    private List<Product> mList = new ArrayList<>();
+    private List<Contact> mList = new ArrayList<>();
 
     private ListView mListView;
 
-    public ProductListAdapter(Context context, ListView listView) {
+    private boolean mIsContactSelected;
+
+    public SelectContactListAdapter(Context context, ListView listView, boolean isContactSelected) {
         this.mContext = context;
         mInflater = LayoutInflater.from(mContext);
         mListView = listView;
+        mIsContactSelected = isContactSelected;
     }
 
-    public void bindData(List<Product> list) {
+    public void bindData(List<Contact> list) {
         this.mList.addAll(list);
         notifyDataSetChanged();
     }
 
-    public void updateList(List<Product> list) {
+    public void updateList(List<Contact> list) {
         this.mList = list;
         notifyDataSetChanged();
     }
@@ -63,29 +70,42 @@ public class ProductListAdapter extends BaseAdapter {
     }
 
     public class ViewHolder {
-        @Bind(R.id.checkbox)
-        public CheckBox checkBox;
+
+        @Bind(R.id.iv_content)
+        public ImageView iv_content;
+
+
     }
 
     @Override
     public View getView(final int position, View convertView, ViewGroup arg2) {
+        Contact contact = mList.get(position);
+
         View view = convertView;
         if (view == null) {
             ViewHolder vh = new ViewHolder();
-            view = mInflater.inflate(R.layout.item_product_list, arg2, false);
+            view = mInflater.inflate(R.layout.item_select_contact_list, arg2, false);
             ButterKnife.bind(vh, view);
             view.setTag(vh);
         }
         ViewHolder vh = (ViewHolder) view.getTag();
 
-        vh.checkBox.setOnClickListener(new View.OnClickListener() {
+        if (position == 1 && mIsContactSelected) {
+            vh.iv_content.setImageResource(R.mipmap.img_contact_selected);
+        } else {
+            vh.iv_content.setImageResource(contact.getImgResId());
+        }
+
+        vh.iv_content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mListView.setItemChecked(position, ((CheckBox) v).isChecked());
-                notifyDataSetChanged();
+                if (position == 1) {
+                    ((ImageView) v).setImageResource(R.mipmap.img_contact_selected);
+                    ((SelectContactActivity) mContext).setResult(Activity.RESULT_OK);
+                    ((SelectContactActivity) mContext).finish();
+                }
             }
         });
-        vh.checkBox.setChecked(mListView.isItemChecked(position));
         return view;
     }
 

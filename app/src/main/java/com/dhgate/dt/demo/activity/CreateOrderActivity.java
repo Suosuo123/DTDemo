@@ -237,15 +237,7 @@ public class CreateOrderActivity extends BaseActivity {
         });
     }
 
-    private void initCityData() {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                // 子线程中解析省市区数据
-                initJsonData();
-            }
-        }).start();
-    }
+
 
     private void initDate() {
         Calendar cal1 = Calendar.getInstance();
@@ -428,6 +420,16 @@ public class CreateOrderActivity extends BaseActivity {
         pvCustomTime.setDate(Calendar.getInstance());//注：根据需求来决定是否使用该方法（一般是精确到秒的情况），此项可以在弹出选择器的时候重新设置当前时间，避免在初始化之后由于时间已经设定，导致选中时间与当前时间不匹配的问题。
         pvCustomTime.show();
 
+    }
+
+    private void initCityData() {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                // 子线程中解析省市区数据
+                initJsonData();
+            }
+        }).start();
     }
 
     private ArrayList<JsonBean> options1Items = new ArrayList<>();
