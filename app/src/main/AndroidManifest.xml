@@ -24,12 +24,7 @@
         <activity
             android:name=".activity.MainActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN" />-->
-            <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.AddProductActivity"
@@ -103,6 +98,7 @@
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait"></activity>
 
+
         <activity
             android:name=".activity.USDAccountActivity"
             android:configChanges="orientation|screenSize|locale"
@@ -117,6 +113,13 @@
             android:name=".activity.OrderDetailActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name=".activity.WarehouseApplicationActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait"></activity>
+
     </application>
 
 </manifest>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drakeet="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/my_bisness_0"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/my_bisness_1">
+
+                <com.dhgate.dt.demo.widget.uiView.UIImageView
+                    android:id="@+id/iv_pay_back"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@null"
+                    android:padding="16dp"
+                    android:src="@mipmap/img_back_white"
+                    drakeet:color_pressed="@color/transparent_60_gray"
+                    drakeet:shape_type="round" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/my_bisness_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/my_bisness_2"
+                android:layout_marginTop="20dp"/>
+            <ImageView
+                android:id="@+id/my_bisness_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/my_bisness_3"
+                android:layout_marginTop="20dp"/>
+            <ImageView
+                android:id="@+id/my_bisness_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/my_bisness_4"
+                android:layout_marginTop="20dp"/>
+            <ImageView
+                android:id="@+id/my_bisness_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/my_bisness_5"
+                android:layout_marginTop="20dp"/>
+            <ImageView
+                android:id="@+id/my_bisness_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/my_bisness_6"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
