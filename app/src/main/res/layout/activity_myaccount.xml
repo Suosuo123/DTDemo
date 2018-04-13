@@ -26,11 +26,20 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/myaccount_img_1"
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@mipmap/myaccount_1"/>
+                    android:background="@mipmap/myaccount_1">
+
+                    <ImageView
+                        android:id="@+id/user_img_icon"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/user_img_icon"
+                        android:layout_marginTop="30dp"/>
+
+                </RelativeLayout>
 
                 <ImageView
                     android:id="@+id/myaccount_img_2"

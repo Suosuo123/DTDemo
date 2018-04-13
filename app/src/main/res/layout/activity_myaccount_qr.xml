@@ -9,14 +9,15 @@
     <RelativeLayout
         android:id="@+id/top_layout"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="220dp"
         android:background="@mipmap/my_accountqr_4">
 
         <RelativeLayout
             android:id="@+id/title_layout"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_alignParentTop="true">
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp">
             <com.dhgate.dt.demo.widget.uiView.UIImageView
                 android:id="@+id/iv_back"
                 android:layout_width="48dp"

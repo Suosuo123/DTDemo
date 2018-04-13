@@ -2,9 +2,7 @@ package com.dhgate.dt.demo.activity;
 
 import android.view.View;
 import android.widget.RelativeLayout;
-
 import com.dhgate.dt.demo.R;
-
 import butterknife.Bind;
 import butterknife.OnClick;
 
@@ -31,7 +29,7 @@ public class MyAccountQRActivity extends BaseActivity {
 
     @OnClick(R.id.iv_back)
     public void onBackIconClick() {
-
+        finish();
     }
 
     @OnClick(R.id.layout_1)
@@ -80,6 +78,7 @@ public class MyAccountQRActivity extends BaseActivity {
     @Override
     protected void onCreate() {
         super.onCreate();
-        initWindow(R.color.text_blue3);
+//        initWindow(R.color.text_blue3);
+        fullScreen();
     }
 }
