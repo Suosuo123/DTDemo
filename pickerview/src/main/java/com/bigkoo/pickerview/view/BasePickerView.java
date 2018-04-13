@@ -19,6 +19,7 @@ import android.widget.FrameLayout;
 import com.bigkoo.pickerview.R;
 import com.bigkoo.pickerview.configure.PickerOptions;
 import com.bigkoo.pickerview.listener.OnDismissListener;
+import com.bigkoo.pickerview.utils.AndroidBug54971Workaround;
 import com.bigkoo.pickerview.utils.PickerViewAnimateUtil;
 
 /**
@@ -139,6 +140,8 @@ public class BasePickerView {
             isShowing = true;
             onAttached(rootView);
             rootView.requestFocus();
+
+            AndroidBug54971Workaround.assistActivity(rootView);
         }
     }
 

@@ -44,18 +44,13 @@
             android:name=".activity.CreateOrderActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"></activity>
 
 
         <activity
             android:name=".activity.ConfirmOrderOfShareActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.OrderManagementActivity"
@@ -96,6 +91,7 @@
         <activity
             android:name=".activity.MyAccountActivity"
             android:configChanges="orientation|screenSize|locale"
+            android:launchMode="singleTask"
             android:screenOrientation="portrait"></activity>
 
 
@@ -104,10 +100,6 @@
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait"></activity>
 
-        <activity
-            android:name=".activity.SendApplyActivity"
-            android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.OrderDetailActivity"
@@ -120,6 +112,21 @@
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait"></activity>
 
+
+        <activity
+            android:name=".activity.SendApply1Activity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.SendApply2Activity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

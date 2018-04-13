@@ -13,62 +13,38 @@
     sothree:umanoScrollableView="@+id/pay_content"
     sothree:umanoShadowHeight="0dp">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/main_gray"
         android:orientation="vertical">
 
-        <include
-            android:id="@+id/rel_title"
-            layout="@layout/layout_title_bar" />
+        <include layout="@layout/layout_title_bar" />
 
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
+        <ImageView
+            android:id="@+id/btn_start"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img_send_apply1" />
 
         <RelativeLayout
-            android:id="@+id/rel_indicator"
+            android:id="@+id/rel_package"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:gravity="center">
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:visibility="gone">
 
-            <RelativeLayout
-                android:id="@+id/indicator"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:gravity="center">
-
-                <ImageView
-                    android:id="@+id/iv_left"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:src="@mipmap/left_selected" />
-
-                <ImageView
-                    android:id="@+id/iv_right1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                    android:layout_toRightOf="@+id/iv_left"
-                    android:src="@mipmap/right_normal" />
-            </RelativeLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.5dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="10dp"
-                android:background="#DDDDDD" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_package" />
 
         </RelativeLayout>
-
 
     </LinearLayout>
 
@@ -93,7 +69,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="订单完成" />
+                android:text="送仓" />
 
             <ImageView
                 android:id="@+id/iv_done"
@@ -107,11 +83,10 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:background="@color/white">
+            android:layout_height="48dp">
 
             <com.dhgate.dt.demo.widget.uiView.UIImageView
-                android:id="@+id/iv_pay_back"
+                android:id="@+id/iv_success_back"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
@@ -123,32 +98,63 @@
 
 
             <TextView
-                android:id="@+id/tv_pay_title"
+                android:id="@+id/tv_send_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:ellipsize="end"
                 android:gravity="center"
-                android:text="订单"
+                android:text="送仓申请"
                 android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/tv_confirm_order"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:layout_marginRight="15px"
-                android:gravity="center_vertical"
-                android:text="确认订单(分享)"
-                android:textColor="@color/text_blue1"
-                android:textSize="15sp" />
 
         </RelativeLayout>
 
-        <include
+        <ScrollView
             android:id="@+id/pay_content"
-            layout="@layout/layout_product_pay" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_create"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_send_apply_success" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_success_back1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_success_back1" />
+
+                    <ImageView
+                        android:id="@+id/iv_success_back2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_success_back2" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
+
+
 </com.dhgate.dt.demo.widget.slidingUpPanel.SlidingUpPanelLayout>
