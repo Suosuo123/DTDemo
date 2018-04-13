@@ -60,7 +60,10 @@ public class SelectProductListActivity extends BaseActivity {
     protected void onCreate() {
         super.onCreate();
 
+        setActionBarWhite();
+
         mKey = getIntent().getStringExtra("key");
+
         if (!TextUtils.isEmpty(mKey)) {
             et_search.setText(mKey);
             et_search.setSelection(mKey.length());
