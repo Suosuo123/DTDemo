@@ -38,7 +38,7 @@ public class SendApply1Activity extends BaseActivity {
             WinToast.toast(mActivity, "请选择所有商品");
             return;
         }
-        Intent intent = new Intent(mActivity, AddProductActivity.class);
+        Intent intent = new Intent(mActivity, SendApply2Activity.class);
         startActivity(intent);
     }
 
