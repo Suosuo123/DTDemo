@@ -70,6 +70,12 @@ public class MyAccountActivity extends BaseActivity {
 
     }
 
+    @OnClick(R.id.user_img_icon)
+    public void OnUserImgIconClick() {
+        Intent intent = new Intent(MyAccountActivity.this, MyAccountQRActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_myaccount;

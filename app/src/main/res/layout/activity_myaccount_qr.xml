@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:drakeet="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_gray">
+    
+    <RelativeLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:background="@mipmap/my_accountqr_4">
+
+        <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp">
+            <com.dhgate.dt.demo.widget.uiView.UIImageView
+                android:id="@+id/iv_back"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:padding="16dp"
+                android:src="@mipmap/img_back_white"
+                drakeet:color_pressed="@color/transparent_60_gray"
+                drakeet:shape_type="round" />
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:text="我的账户"
+                android:textSize="18sp" />
+
+            <com.dhgate.dt.demo.widget.uiView.UIImageView
+                android:id="@+id/iv_help"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                drakeet:color_pressed="@color/transparent_60_gray"
+                drakeet:shape_type="round"
+                android:src="@mipmap/help_icon"
+                android:padding="16dp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/title_layout"
+            android:background="@mipmap/my_accountqr_3"/>
+
+        <RelativeLayout
+            android:id="@+id/join_icon_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/join_icon"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/name_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/my_accountqr_11"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/exist_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/exist_icon"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/join_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/my_accountqr_1"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:rowCount="3"
+                android:columnCount="2"
+                android:background="#E7E9F8">
+                <RelativeLayout
+                    android:id="@+id/layout_1"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="1dp"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/main_gray">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/my_accountqr_5"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"
+                        android:layout_centerInParent="true"/>
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/layout_2"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/main_gray">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/my_accountqr_6"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_3"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/main_gray">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/my_accountqr_7"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_4"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/main_gray">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/my_accountqr_8"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_5"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:layout_marginRight="1dp"
+                    android:background="@color/main_gray">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/my_accountqr_9"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"/>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layout_6"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:gravity="center"
+                    android:background="@color/main_gray">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@mipmap/my_accountqr_10"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="30dp"/>
+                </RelativeLayout>
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/qrcode_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="48dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/my_accountqr_2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:clickable="true"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@mipmap/my_accountqr_3"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:clickable="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>
