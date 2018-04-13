@@ -12,8 +12,7 @@ import com.dhgate.dt.demo.R;
 public class SplashActivity extends BaseActivity {
 
     private final int SPLASH_DISPLAY_LENGHT = 1500;
-     private Handler handler;
-
+    private Handler handler;
 
     @Override
     protected int getLayoutId() {
@@ -32,7 +31,7 @@ public class SplashActivity extends BaseActivity {
 
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MyAccountActivity.class);
+                Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
                 SplashActivity.this.finish();
             }
@@ -46,4 +45,6 @@ public class SplashActivity extends BaseActivity {
         }
         return  super.onKeyDown(keyCode, event);
     }
+
+
 }
