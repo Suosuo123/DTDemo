@@ -6,12 +6,21 @@ public class SendApplyProduct extends BaseEntity {
     private String name;
     private String mode;
     private int count;
+    private float singlePrice;
+    private float totalPrice;
 
     public SendApplyProduct(int iconResId, String name, String mode, int count) {
         this.iconResId = iconResId;
         this.name = name;
         this.mode = mode;
         this.count = count;
+    }
+
+    public SendApplyProduct(String name, int count, float singlePrice, float totalPrice) {
+        this.name = name;
+        this.count = count;
+        this.singlePrice = singlePrice;
+        this.totalPrice = totalPrice;
     }
 
     public int getIconResId() {
@@ -44,5 +53,21 @@ public class SendApplyProduct extends BaseEntity {
 
     public void setCount(int count) {
         this.count = count;
+    }
+
+    public float getSinglePrice() {
+        return singlePrice;
+    }
+
+    public void setSinglePrice(int singlePrice) {
+        this.singlePrice = singlePrice;
+    }
+
+    public float getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

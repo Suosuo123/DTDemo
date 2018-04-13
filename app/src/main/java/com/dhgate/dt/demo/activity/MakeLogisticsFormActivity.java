@@ -14,7 +14,6 @@ import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.entity.JsonBean;
 import com.dhgate.dt.demo.utils.GetJsonDataUtil;
 import com.dhgate.dt.demo.utils.log.LogUtils;
-import com.dhgate.dt.demo.widget.WinToast;
 import com.google.gson.Gson;
 
 import org.json.JSONArray;
@@ -92,12 +91,14 @@ public class MakeLogisticsFormActivity extends BaseActivity {
 
     @OnClick(R.id.iv_dt_logistics)
     public void dtClick() {
-        WinToast.toast(mActivity, "dt");
+        Intent intent = new Intent(mActivity, ExportBillActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.iv_other_logistics)
     public void otherClick() {
-        WinToast.toast(mActivity, "other");
+        Intent intent = new Intent(mActivity, ExportBillActivity.class);
+        startActivity(intent);
     }
 
     private boolean logisticsTypeSelected;
