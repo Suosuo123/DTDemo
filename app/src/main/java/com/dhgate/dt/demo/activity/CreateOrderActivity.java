@@ -36,6 +36,7 @@ import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.entity.JsonBean;
 import com.dhgate.dt.demo.fragment.CreateOrderFragment;
 import com.dhgate.dt.demo.fragment.ProductsManagementFragment;
+import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
 import com.dhgate.dt.demo.utils.CommonUtils;
 import com.dhgate.dt.demo.utils.GetJsonDataUtil;
 import com.dhgate.dt.demo.utils.log.LogUtils;
@@ -71,7 +72,7 @@ public class CreateOrderActivity extends BaseActivity {
     @Bind(R.id.iv_left)
     public ImageView iv_left;
 
-    @Bind(R.id.iv_right)
+    @Bind(R.id.iv_right1)
     public ImageView iv_right;
 
     @Bind(R.id.rel_complete_order)
@@ -114,7 +115,7 @@ public class CreateOrderActivity extends BaseActivity {
         viewPager.setCurrentItem(0, true);
     }
 
-    @OnClick(R.id.iv_right)
+    @OnClick(R.id.iv_right1)
     public void rightClick() {
         iv_left.setImageResource(R.mipmap.left_normal);
         iv_right.setImageResource(R.mipmap.right_selected);
@@ -610,6 +611,7 @@ public class CreateOrderActivity extends BaseActivity {
         contentContainer.startAnimation(inAnim);
         rootView.requestFocus();
 
+        AndroidBug54971Workaround.assistActivity(rootView);
     }
 
     /**

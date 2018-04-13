@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.dhgate.dt.demo.MainApplication;
 import com.dhgate.dt.demo.R;
+import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
 import com.dhgate.dt.demo.widget.swipeBackLayout.ui.SwipeBackActivity;
 import com.dhgate.dt.demo.widget.uiView.UIImageView;
 
@@ -133,7 +134,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
     }
 
 
-    private void initWindow(int colorResId) {
+    public void initWindow(int colorResId) {
 
         Window window = getWindow();
         if (Build.VERSION.SDK_INT >= 19) {
@@ -141,7 +142,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
         }
         if (Build.VERSION.SDK_INT >= 21) {
             window.setStatusBarColor(getColor(colorResId));
-            window.setNavigationBarColor(getColor(colorResId));
+//            window.setNavigationBarColor(getColor(colorResId));
         } else {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
                 window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
@@ -153,6 +154,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
 
+//     window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
     }
 
 }

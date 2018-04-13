@@ -29,7 +29,7 @@ public class AddProductActivity extends BaseActivity implements ViewPager.OnPage
     @Bind(R.id.iv_left)
     public ImageView iv_left;
 
-    @Bind(R.id.iv_right)
+    @Bind(R.id.iv_right1)
     public ImageView iv_right;
 
     @OnClick(R.id.iv_left)
@@ -39,7 +39,7 @@ public class AddProductActivity extends BaseActivity implements ViewPager.OnPage
         viewPager.setCurrentItem(0, true);
     }
 
-    @OnClick(R.id.iv_right)
+    @OnClick(R.id.iv_right1)
     public void rightClick() {
         iv_left.setImageResource(R.mipmap.left_normal);
         iv_right.setImageResource(R.mipmap.right_selected);

@@ -6,6 +6,7 @@ import android.widget.RelativeLayout;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.widget.slidingUpPanel.SlidingUpPanelLayout;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 
@@ -96,8 +97,10 @@ public class MyAccountActivity extends BaseActivity {
             public void onPanelStateChanged(View panel, SlidingUpPanelLayout.PanelState previousState, SlidingUpPanelLayout.PanelState newState) {
                 if (newState == SlidingUpPanelLayout.PanelState.EXPANDED) {
                     rel_complete_order.setVisibility(View.GONE);
+                    initWindow(R.color.text_blue2);
                 } else if (newState == SlidingUpPanelLayout.PanelState.COLLAPSED) {
                     rel_complete_order.setVisibility(View.VISIBLE);
+                    initWindow(R.color.main_gray);
                 }
             }
         });

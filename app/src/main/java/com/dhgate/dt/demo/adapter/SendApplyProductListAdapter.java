@@ -1,49 +1,46 @@
 package com.dhgate.dt.demo.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.text.TextUtils;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
-import com.dhgate.dt.demo.activity.PaymentActivity;
-import com.dhgate.dt.demo.activity.SendApply1Activity;
-import com.dhgate.dt.demo.entity.Order1;
+import com.dhgate.dt.demo.entity.SendApplyProduct;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 
-public class OrderListAdapter1 extends BaseAdapter {
+public class SendApplyProductListAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private Context mContext;
 
-    private List<Order1> mList = new ArrayList<>();
+    private List<SendApplyProduct> mList = new ArrayList<>();
 
     private ListView mListView;
 
-    public OrderListAdapter1(Context context, ListView listView) {
+    public SendApplyProductListAdapter(Context context, ListView listView) {
         this.mContext = context;
         mInflater = LayoutInflater.from(mContext);
         mListView = listView;
     }
 
-    public void bindData(List<Order1> list) {
+    public void bindData(List<SendApplyProduct> list) {
         this.mList.addAll(list);
         notifyDataSetChanged();
     }
 
-    public void updateList(List<Order1> list) {
+    public void updateList(List<SendApplyProduct> list) {
         this.mList = list;
         notifyDataSetChanged();
     }
@@ -73,38 +70,28 @@ public class OrderListAdapter1 extends BaseAdapter {
         @Bind(R.id.checkbox)
         public CheckBox checkBox;
 
+        @Bind(R.id.iv_icon)
+        public ImageView iv_icon;
+
+        @Bind(R.id.tv_mode)
+        public TextView tv_mode;
+
         @Bind(R.id.tv_name)
         public TextView tv_name;
 
-        @Bind(R.id.tv_action1)
-        public TextView tv_action1;
+        @Bind(R.id.tv_count)
+        public TextView tv_count;
 
-        @Bind(R.id.tv_action2)
-        public TextView tv_action2;
-
-        @Bind(R.id.tv_action3)
-        public TextView tv_action3;
-
-        @OnClick(R.id.tv_action2)
-        public void payClick() {
-            if (tv_action2.getText().equals("付款")) {
-                Intent intent = new Intent(mContext, PaymentActivity.class);
-                mContext.startActivity(intent);
-            } else if (tv_action2.getText().equals("送仓申请")) {
-                Intent intent = new Intent(mContext, SendApply1Activity.class);
-                mContext.startActivity(intent);
-            }
-        }
     }
 
     @Override
     public View getView(final int position, View convertView, ViewGroup arg2) {
-        Order1 order1 = mList.get(position);
+        SendApplyProduct product = mList.get(position);
 
         View view = convertView;
         if (view == null) {
             ViewHolder vh = new ViewHolder();
-            view = mInflater.inflate(R.layout.item_order_list_1, arg2, false);
+            view = mInflater.inflate(R.layout.item_send_apply_product_list, arg2, false);
             ButterKnife.bind(vh, view);
             view.setTag(vh);
         }
@@ -119,18 +106,10 @@ public class OrderListAdapter1 extends BaseAdapter {
         });
         vh.checkBox.setChecked(mListView.isItemChecked(position));
 
-
-        vh.tv_name.setText(order1.getName());
-        vh.tv_action1.setText(order1.getAction1());
-        vh.tv_action2.setText(order1.getAction2());
-        vh.tv_action3.setText(order1.getAction3());
-
-        if (order1.getName().equals("未输入客户名称")) {
-            vh.tv_name.setTextColor(mContext.getResources().getColor(R.color.text_gray1));
-        } else {
-            vh.tv_name.setTextColor(mContext.getResources().getColor(R.color.black));
-        }
-        vh.tv_action3.setVisibility(TextUtils.isEmpty(order1.getAction3()) ? View.GONE : View.VISIBLE);
+        vh.iv_icon.setImageResource(product.getIconResId());
+        vh.tv_name.setText(product.getName());
+        vh.tv_mode.setText(product.getMode());
+        vh.tv_count.setText("x " + product.getCount());
 
         return view;
     }

@@ -80,5 +80,6 @@ public class MyAccountQRActivity extends BaseActivity {
     @Override
     protected void onCreate() {
         super.onCreate();
+        initWindow(R.color.text_blue3);
     }
 }

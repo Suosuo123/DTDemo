@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_gray"
     android:orientation="vertical">
 
     <include layout="@layout/layout_title_bar" />
@@ -18,17 +19,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="60dp"
         android:paddingLeft="15dp"
         android:paddingRight="15dp">
 
         <RelativeLayout
+            android:id="@+id/rel_check"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true">
 
             <CheckBox
-                android:id="@+id/checkbox"
+                android:id="@+id/cb_all"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
@@ -40,7 +42,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/checkbox"
+                android:layout_toRightOf="@+id/cb_all"
                 android:text="全选"
                 android:textColor="#787878"
                 android:textSize="12sp" />
@@ -52,8 +54,18 @@
     <ListView
         android:id="@+id/lv_product"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:divider="@android:color/transparent"
-        android:dividerHeight="0dp" />
+        android:dividerHeight="15dp" />
+
+
+    <ImageView
+        android:id="@+id/iv_make_package"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:src="@mipmap/img_make_package" />
 
 </LinearLayout>
