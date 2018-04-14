@@ -119,10 +119,9 @@ public abstract class BaseActivity extends SwipeBackActivity {
      */
     public void setActionTitle(String title) {
         if (!TextUtils.isEmpty(title)) {
-            if (tv_title != null) {
-                if (!title.isEmpty())
-                    tv_title.setText(title);
-            }
+//            if (tv_title != null) {
+            tv_title.setText(title);
+//            }
         }
 
     }
