@@ -1,8 +1,11 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.RelativeLayout;
+
 import com.dhgate.dt.demo.R;
+
 import butterknife.Bind;
 import butterknife.OnClick;
 
@@ -34,12 +37,14 @@ public class MyAccountQRActivity extends BaseActivity {
 
     @OnClick(R.id.layout_1)
     public void onLayout1Click() {
-
+        Intent intent = new Intent(mActivity, ForeignBankActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.layout_2)
     public void onLayout2Click() {
-
+        Intent intent = new Intent(mActivity, AccountManagementActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.layout_3)

@@ -2,58 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_gray"
     android:orientation="vertical">
 
     <include layout="@layout/layout_title_bar" />
-
-    <ImageView
-        android:id="@+id/btn_start"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="20dp"
-        android:scaleType="fitXY"
-        android:src="@mipmap/img_send_apply1" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp">
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true">
-
-            <CheckBox
-                android:id="@+id/checkbox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:background="@android:color/transparent"
-                android:button="@drawable/selector_check_blue" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@+id/checkbox"
-                android:text="全选"
-                android:textColor="#787878"
-                android:textSize="12sp" />
-
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-    <ListView
-        android:id="@+id/lv_product"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp" />
 
 </LinearLayout>
