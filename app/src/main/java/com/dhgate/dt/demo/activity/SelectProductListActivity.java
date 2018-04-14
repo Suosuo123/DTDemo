@@ -73,9 +73,10 @@ public class SelectProductListActivity extends BaseActivity {
         lv_product.setAdapter(madAdapter);
         lv_product.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
 
-        for (int i = 0; i < 20; i++) {
-            mList.add(new Product());
-        }
+        mList.add(new Product(R.mipmap.search_product1, "无线蓝牙降噪头戴式耳机", "PLAY H9", 0));
+        mList.add(new Product(R.mipmap.search_product2, "Bose QuietComfort 35", "QC35", 0));
+        mList.add(new Product(R.mipmap.search_product3, "Hi-Res蓝牙耳机", "WH-1000XM2", 0));
+        mList.add(new Product(R.mipmap.search_product4, "挂耳式无线音乐蓝牙耳机", "4.1", 0));
 
         madAdapter.bindData(mList);
 

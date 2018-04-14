@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -95,6 +96,12 @@ public class CreateOrderActivity extends BaseActivity {
     @Bind(R.id.et_money)
     public EditText et_money;
 
+    @Bind(R.id.tv_total)
+    public TextView tv_total;
+
+    @Bind(R.id.tv_balance)
+    public TextView tv_balance;
+
     @Bind(R.id.tv_day_range)
     public TextView tv_day_range;
 
@@ -157,8 +164,6 @@ public class CreateOrderActivity extends BaseActivity {
     private MyPagerAdapter mPagerAdapter;
     private List<Fragment> mFragments = new ArrayList<>();
 
-    public static int ORDER_PRODUCT_COUNT=0;
-
 //    private CreateOrderFragment mCreateOrderFragment;
 
     private int mProductNum = 0;
@@ -168,7 +173,6 @@ public class CreateOrderActivity extends BaseActivity {
         super.onCreate();
 
         mProductNum = getIntent().getIntExtra("count", 3);
-        ORDER_PRODUCT_COUNT=mProductNum;
     }
 
     @Override
@@ -181,7 +185,7 @@ public class CreateOrderActivity extends BaseActivity {
         iv_right.setImageResource(R.mipmap.right_normal);
         viewPager.setCurrentItem(0, true);
 
-        initViewpager(ORDER_PRODUCT_COUNT);
+        initViewpager();
 
         initSlidingLayout();
 
@@ -228,16 +232,19 @@ public class CreateOrderActivity extends BaseActivity {
                         return true;
                     }
 
+                    ll_date_content.setVisibility(View.VISIBLE);
+
+                    double balance = Double.parseDouble(tv_total.getText().toString().replace("¥", "")) - Double.parseDouble(et_money.getText().toString().replace("¥", ""));
+                    tv_balance.setText("¥" + balance);
+
                     CommonUtils.hideInputMethod(mActivity);
 
-                    ll_date_content.setVisibility(View.VISIBLE);
                     return true;
                 }
                 return false;
             }
         });
     }
-
 
 
     private void initDate() {
@@ -279,14 +286,13 @@ public class CreateOrderActivity extends BaseActivity {
         });
     }
 
-    private void initViewpager(int productNum) {
-        LogUtils.d(productNum);
+    private void initViewpager() {
 
         mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mPagerAdapter);
 
         mFragments.clear();
-        mFragments.add(CreateOrderFragment.newInstance(productNum));
+        mFragments.add(CreateOrderFragment.newInstance(mProductNum));
         mFragments.add(ProductsManagementFragment.newInstance(10));
 
         mPagerAdapter.update(mFragments);
@@ -325,7 +331,7 @@ public class CreateOrderActivity extends BaseActivity {
     }
 
 
-    private class MyPagerAdapter extends FragmentStatePagerAdapter {
+    private class MyPagerAdapter extends FragmentPagerAdapter {
 
         private List<Fragment> list = new ArrayList<>();
 
@@ -333,7 +339,6 @@ public class CreateOrderActivity extends BaseActivity {
             this.list = list;
             notifyDataSetChanged();
         }
-
 
         public MyPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -349,11 +354,11 @@ public class CreateOrderActivity extends BaseActivity {
             return list.get(position);
         }
 
-        @Override
-        public int getItemPosition(Object object) {
-            // TODO Auto-generated method stub
-            return PagerAdapter.POSITION_NONE;
-        }
+//        @Override
+//        public int getItemPosition(Object object) {
+//            // TODO Auto-generated method stub
+//            return PagerAdapter.POSITION_NONE;
+//        }
 
     }
 
@@ -652,8 +657,6 @@ public class CreateOrderActivity extends BaseActivity {
     }
 
     public void changePageToOrder(int addCount) {
-        ORDER_PRODUCT_COUNT+=addCount;
-
 //        FragmentManager fm = getSupportFragmentManager();
 //        FragmentTransaction transaction = fm.beginTransaction();
 //        //把所有缓存碎片都删了。
@@ -662,7 +665,12 @@ public class CreateOrderActivity extends BaseActivity {
 //        }
 //        transaction.commit();
 
-        initView();
+        CreateOrderFragment fragment = (CreateOrderFragment) mFragments.get(0);
+        if (fragment != null) {
+            fragment.addProduct(addCount);
+        }
+        viewPager.setCurrentItem(0);
+
     }
 
 }

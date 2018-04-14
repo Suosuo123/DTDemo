@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/tv_order_no"
-                    android:text="2018000000001"
+                    android:text="008651201804100"
                     android:textColor="#787878"
                     android:textSize="14sp" />
 
@@ -56,11 +56,12 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tv_total"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/tv_order_total"
-                    android:text="¥10000.00"
+                    android:text="¥25475.00"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -116,11 +117,12 @@
                     android:textSize="14sp" />
 
                 <TextView
+                    android:id="@+id/tv_balance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toRightOf="@+id/tv_order_balance"
-                    android:text="¥10000.00"
+                    android:text="¥25475.00"
                     android:textColor="@color/black"
                     android:textSize="14sp" />
 

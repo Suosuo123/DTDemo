@@ -5,11 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.activity.CreateOrderActivity;
 import com.dhgate.dt.demo.entity.Product;
+import com.dhgate.dt.demo.entity.SendApplyProduct;
 import com.dhgate.dt.demo.utils.log.LogUtils;
 
 import java.util.ArrayList;
@@ -19,13 +21,13 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 
-public class CreateOrderProductListAdapter extends BaseAdapter {
+public class OrderProductListAdapter extends BaseAdapter {
     private LayoutInflater mInflater;
     private Context mContext;
 
     private List<Product> mList = new ArrayList<>();
 
-    public CreateOrderProductListAdapter(Context context) {
+    public OrderProductListAdapter(Context context) {
         this.mContext = context;
         mInflater = LayoutInflater.from(mContext);
     }
@@ -43,15 +45,6 @@ public class CreateOrderProductListAdapter extends BaseAdapter {
     public void removeOneItem(int position) {
         this.mList.remove(position);
         notifyDataSetChanged();
-
-        LogUtils.d(this.mList.size());
-
-        CreateOrderActivity.ORDER_PRODUCT_COUNT--;
-    }
-
-    @Override
-    public boolean hasStableIds() {
-        return true;
     }
 
     @Override
@@ -70,12 +63,34 @@ public class CreateOrderProductListAdapter extends BaseAdapter {
     }
 
     public class ViewHolder {
+
         @Bind(R.id.index)
         public TextView tv_index;
+
+        @Bind(R.id.iv_icon)
+        public ImageView iv_icon;
+
+        @Bind(R.id.tv_single_price)
+        public TextView tv_single_price;
+
+        @Bind(R.id.item_price_total)
+        public TextView tv_item_price_total;
+
+        @Bind(R.id.tv_name)
+        public TextView tv_name;
+
+        @Bind(R.id.tv_mode)
+        public TextView tv_mode;
+
+        @Bind(R.id.tv_count)
+        public TextView tv_count;
     }
 
     @Override
-    public View getView(final int position, View convertView, ViewGroup arg2) {
+    public View getView(int position, View convertView, ViewGroup arg2) {
+
+        Product product = mList.get(position);
+
         View view = convertView;
         if (view == null) {
             ViewHolder vh = new ViewHolder();
@@ -84,7 +99,14 @@ public class CreateOrderProductListAdapter extends BaseAdapter {
             view.setTag(vh);
         }
         ViewHolder vh = (ViewHolder) view.getTag();
+
         vh.tv_index.setText((position + 1) + "");
+        vh.iv_icon.setImageResource(product.getIconResId());
+        vh.tv_name.setText(product.getName());
+        vh.tv_mode.setText(product.getMode());
+        vh.tv_count.setText("x " + product.getCount());
+        vh.tv_single_price.setText("¥ " + product.getSinglePrice() + "");
+        vh.tv_item_price_total.setText("¥ " + product.getTotalPrice() + "");
         return view;
     }
 

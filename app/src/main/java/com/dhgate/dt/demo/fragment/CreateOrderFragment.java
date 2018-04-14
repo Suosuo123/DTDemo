@@ -3,13 +3,17 @@ package com.dhgate.dt.demo.fragment;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.widget.AbsListView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.activity.CreateOrderActivity;
 import com.dhgate.dt.demo.activity.EditProductActivity;
-import com.dhgate.dt.demo.adapter.CreateOrderProductListAdapter;
+import com.dhgate.dt.demo.adapter.OrderProductListAdapter;
 import com.dhgate.dt.demo.entity.Product;
 import com.dhgate.dt.demo.utils.CommonUtils;
 import com.dhgate.dt.demo.utils.log.LogUtils;
@@ -44,41 +48,66 @@ public class CreateOrderFragment extends BaseFragment {
     @Bind(R.id.lv_product)
     public MySwipeMenuListView lv_product;
 
-    @Bind(R.id.tv_money)
     public TextView tv_money;
 
-    @OnClick(R.id.iv_add)
-    public void addClick() {
-        Intent intent = new Intent(mActivity, EditProductActivity.class);
-        startActivity(intent);
-    }
-
-    private CreateOrderProductListAdapter mAdapter;
+    private OrderProductListAdapter mAdapter;
     private List<Product> mList = new ArrayList<>();
 
     private int mTotalCount = 3;
-    private int mSinglePrice = 28;
-    private int mTotalPrice = 0;
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mTotalCount = getArguments().getInt("count", 3);
+    }
 
     @Override
     protected void initView() {
 
         lv_product.setNestedpParent(((CreateOrderActivity) mActivity).viewPager);
 
-        mTotalCount = getArguments().getInt("count", 3);
-        mTotalPrice = mTotalCount * mSinglePrice;
-        tv_money.setText("¥" + mTotalPrice);
+        View footerView = LayoutInflater.from(mActivity).inflate(R.layout.layouorder_product_list_footer, lv_product, false);
+        tv_money = (TextView) footerView.findViewById(R.id.tv_money);
+        ImageView iv_add = (ImageView) footerView.findViewById(R.id.iv_add);
+        iv_add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, EditProductActivity.class);
+                startActivity(intent);
+            }
+        });
 
-        mAdapter = new CreateOrderProductListAdapter(mActivity);
+        lv_product.addFooterView(footerView);
+
+        mAdapter = new OrderProductListAdapter(mActivity);
         lv_product.setAdapter(mAdapter);
 
-        for (int i = 0; i < mTotalCount; i++) {
+        mList.add(new Product(R.mipmap.order_product1, "蓝牙插卡电话智能手表", "MD-90112", 40, 135, 5400));
+        mList.add(new Product(R.mipmap.order_product2, "无线蓝牙降噪头戴式耳机", "PLAY H9", 70, 225, 15750));
+        mList.add(new Product(R.mipmap.order_product3, "iPhone 6p 手机壳", "iPhone 6p 手机壳", 5, 865, 4325));
+
+        mAdapter.updateList(mList);
+
+        initMenu();
+
+    }
+
+
+    @Override
+    protected void initData() {
+
+    }
+
+    public void addProduct(int count) {
+        for (int i = 0; i < count; i++) {
             mList.add(new Product());
         }
-        mAdapter.bindData(mList);
+        mAdapter.updateList(mList);
 
+        initMenu();
+    }
 
+    private void initMenu() {
         SwipeMenuCreator creator = new SwipeMenuCreator() {
             @Override
             public void create(SwipeMenu menu) {
@@ -102,19 +131,11 @@ public class CreateOrderFragment extends BaseFragment {
                 switch (index) {
                     case 0:// delete
                         mAdapter.removeOneItem(position);
-                        mTotalPrice = mSinglePrice * lv_product.getCount();
-                        tv_money.setText("¥" + mTotalPrice);
                         break;
                 }
                 return false;
             }
         });
-
-    }
-
-    @Override
-    protected void initData() {
-
     }
 
 }
