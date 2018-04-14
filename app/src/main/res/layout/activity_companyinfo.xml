@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_gray">
+
+    <include
+        android:id="@+id/rel_title"
+        layout="@layout/layout_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_title">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="70dp">
+            <ImageView
+                android:id="@+id/company_img_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/company_info_1"/>
+
+            <RelativeLayout
+                android:id="@+id/input_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/company_img_1"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <EditText
+                    android:id="@+id/input_1"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:textColor="#B4B4B4"
+                    android:textSize="12sp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:background="@null"
+                    android:paddingLeft="10dp"
+                    android:textCursorDrawable="@drawable/edittext_cursor_style"/>
+                
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"
+                    android:layout_below="@+id/input_1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"/>
+                
+
+                <EditText
+                    android:id="@+id/input_2"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:textColor="#B4B4B4"
+                    android:textSize="12sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20sp"
+                    android:background="@null"
+                    android:paddingLeft="10dp"
+                    android:textCursorDrawable="@drawable/edittext_cursor_style"/>
+
+                <View
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:background="#EEEEEE"
+                    android:layout_below="@+id/input_2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20sp"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/company_img_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_content"
+                android:background="@mipmap/company_info_2"
+                android:layout_marginTop="20dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/company_info_3"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:id="@+id/return_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/company_info_4"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>
