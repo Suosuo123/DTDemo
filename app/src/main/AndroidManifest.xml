@@ -50,8 +50,7 @@
         <activity
             android:name=".activity.ConfirmOrderOfShareActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.OrderManagementActivity"
@@ -95,8 +94,8 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
 
@@ -132,22 +131,10 @@
         <activity
             android:name=".activity.ExportBillActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+            android:screenOrientation="portrait"></activity>
 
         <activity
             android:name=".activity.MyAccountQRActivity"
-            android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-        </activity>
-
-        <activity
-            android:name=".activity.SplashActivity"
-            android:launchMode="singleTask"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -157,10 +144,25 @@
         </activity>
 
         <activity
+            android:name=".activity.SplashActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
             android:name=".activity.LoginActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.ForeignBankActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.AccountManagementActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:screenOrientation="portrait"></activity>
 
     </application>
 
