@@ -1,5 +1,6 @@
 package com.dhgate.dt.demo.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
@@ -7,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
+import com.dhgate.dt.demo.activity.ExportManagementActivity;
 import com.dhgate.dt.demo.adapter.OrderListAdapter2;
 import com.dhgate.dt.demo.entity.Order2;
 
@@ -64,7 +66,8 @@ public class OrderListFragment2 extends BaseFragment {
         lv_product.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mAdapter.notifyDataSetChanged();
+                Intent intent = new Intent(mActivity, ExportManagementActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.bigkoo.pickerview.utils.PickerViewAnimateUtil;
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.adapter.ExportBillProductListAdapter;
@@ -24,8 +23,6 @@ import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import butterknife.Bind;
 import butterknife.OnClick;
