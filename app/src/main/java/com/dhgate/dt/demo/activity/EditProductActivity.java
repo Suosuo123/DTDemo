@@ -65,6 +65,11 @@ public class EditProductActivity extends BaseActivity {
         hideAnim();
     }
 
+    @OnClick(R.id.save_btn)
+    public void onSaveClick() {
+        finish();
+    }
+
     @Override
     protected int getLayoutId() {
         return R.layout.activity_edit_product;

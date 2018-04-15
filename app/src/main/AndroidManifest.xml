@@ -54,16 +54,21 @@
             android:name=".activity.OrderManagementActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
 
         <activity
             android:name=".activity.EditProductActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
 
         <activity
             android:name=".activity.MakeLogisticsFormActivity"
@@ -78,7 +83,13 @@
         <activity
             android:name=".activity.PaymentActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+
+        </activity>
 
 
         <activity
@@ -102,10 +113,10 @@
             android:name=".activity.USDAccountActivity"
             android:configChanges="orientation|screenSize|locale"
             android:screenOrientation="portrait">
-            <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
 
         </activity>
 
@@ -140,13 +151,23 @@
         <activity
             android:name=".activity.MyAccountQRActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
 
         <activity
             android:name=".activity.SplashActivity"
             android:configChanges="orientation|screenSize|locale"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".activity.LoginActivity"

@@ -34,12 +34,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@mipmap/order_payment_2"/>
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@mipmap/order_payment_3"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"/>
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@mipmap/order_payment_3"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:layout_marginBottom="20dp"/>-->
         </LinearLayout>
     </ScrollView>
 
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:text="¥ 10000.00"/>
+                android:text="¥ 25475.00"/>
         </LinearLayout>
 
         <LinearLayout
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:textSize="16sp"
-                android:text="¥ 10000.00"/>
+                android:text="¥ 7643.00"/>
         </LinearLayout>
 
         <LinearLayout

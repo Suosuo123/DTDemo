@@ -37,6 +37,7 @@ public class LoginActivity extends BaseActivity {
     public void onLoginClick() {
         Intent intent = new Intent(LoginActivity.this, MyAccountActivity.class);
         startActivity(intent);
+        finish();
     }
 
 
