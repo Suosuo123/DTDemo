@@ -14,7 +14,7 @@ import com.dhgate.dt.demo.entity.Product;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
@@ -63,7 +63,7 @@ public class ProductManagementListAdapter extends BaseAdapter {
     }
 
     public class ViewHolder {
-        @Bind(R.id.checkbox)
+        @BindView(R.id.checkbox)
         public CheckBox checkBox;
     }
 

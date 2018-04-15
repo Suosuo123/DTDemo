@@ -15,11 +15,10 @@ import android.widget.TextView;
 
 import com.dhgate.dt.demo.MainApplication;
 import com.dhgate.dt.demo.R;
-import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
 import com.dhgate.dt.demo.widget.swipeBackLayout.ui.SwipeBackActivity;
 import com.dhgate.dt.demo.widget.uiView.UIImageView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -33,19 +32,19 @@ public abstract class BaseActivity extends SwipeBackActivity {
      * 导航条
      */
     @Nullable
-    @Bind(R.id.rel_bar)
+    @BindView(R.id.rel_bar)
     public RelativeLayout rel_bar;
     /**
      * 返回
      */
     @Nullable
-    @Bind(R.id.iv_back)
+    @BindView(R.id.iv_back)
     public UIImageView iv_back;
     /**
      * 标题
      */
     @Nullable
-    @Bind(R.id.tv_title)
+    @BindView(R.id.tv_title)
     public TextView tv_title;
 
     @Nullable
@@ -55,7 +54,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
     }
 
     @Nullable
-    @Bind(R.id.iv_right)
+    @BindView(R.id.iv_right)
     public UIImageView iv_right;
 
     @Override
@@ -83,7 +82,7 @@ public abstract class BaseActivity extends SwipeBackActivity {
     protected void onDestroy() {
         super.onDestroy();
 
-        ButterKnife.unbind(this);
+//        ButterKnife.unbind(this);
 
         //统一管理activity
         MainApplication.getApplication().removeActivity(mActivity);
@@ -119,9 +118,9 @@ public abstract class BaseActivity extends SwipeBackActivity {
      */
     public void setActionTitle(String title) {
         if (!TextUtils.isEmpty(title)) {
-//            if (tv_title != null) {
-            tv_title.setText(title);
-//            }
+            if (tv_title != null) {
+                tv_title.setText(title);
+            }
         }
 
     }

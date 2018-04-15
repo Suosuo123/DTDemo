@@ -10,7 +10,7 @@ import com.dhgate.dt.demo.entity.Contact;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 public class SelectContactActivity extends BaseActivity {
 
@@ -19,7 +19,7 @@ public class SelectContactActivity extends BaseActivity {
         return R.layout.activity_select_contact;
     }
 
-    @Bind(R.id.lv_contact)
+    @BindView(R.id.lv_contact)
     public ListView lv_contact;
 
     private SelectContactListAdapter mAdapter;

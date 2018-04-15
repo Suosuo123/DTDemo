@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 
 import com.dhgate.dt.demo.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -19,16 +19,16 @@ import butterknife.OnClick;
 
 public class SwapActivity2 extends BaseActivity {
 
-    @Bind(R.id.usd_et)
+    @BindView(R.id.usd_et)
     EditText usd_et;
 
-    @Bind(R.id.confirm_btn_gray)
+    @BindView(R.id.confirm_btn_gray)
     ImageView confirm_btn_gray;
 
-    @Bind(R.id.confirm_btn_blue)
+    @BindView(R.id.confirm_btn_blue)
     ImageView confirm_btn_blue;
 
-    @Bind(R.id.swap_success_layout)
+    @BindView(R.id.swap_success_layout)
     RelativeLayout swap_success_layout;
 
     @OnClick(R.id.confirm_btn_blue)

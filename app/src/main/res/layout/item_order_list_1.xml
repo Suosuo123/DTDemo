@@ -32,14 +32,24 @@
                 android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未输入客户名称"
+                android:text="MOHAMED"
                 android:textColor="#3B3C3F"
                 android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/tv_company"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
+                android:text="广州金行电子科技"
+                android:textColor="#9B9B9B"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
                 android:text="¥30000.00"
                 android:textColor="#3B3C3F"
                 android:textSize="12sp" />

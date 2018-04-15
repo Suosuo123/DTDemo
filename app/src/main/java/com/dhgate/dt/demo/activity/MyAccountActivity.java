@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.widget.slidingUpPanel.SlidingUpPanelLayout;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -16,10 +16,11 @@ import butterknife.OnClick;
 
 public class MyAccountActivity extends BaseActivity {
 
-    @Bind(R.id.sliding_layout)
+//    @BindView(R.id.sliding_layout)
+    @BindView(R.id.sliding_layout)
     public SlidingUpPanelLayout sliding_layout;
 
-    @Bind(R.id.rel_complete_order)
+    @BindView(R.id.rel_complete_order)
     RelativeLayout rel_complete_order;
 
     @OnClick(R.id.myaccount_img_2)

@@ -19,7 +19,7 @@ import com.dhgate.dt.demo.entity.Order1;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -70,19 +70,25 @@ public class OrderListAdapter1 extends BaseAdapter {
 
     public class ViewHolder {
 
-        @Bind(R.id.checkbox)
+        @BindView(R.id.checkbox)
         public CheckBox checkBox;
 
-        @Bind(R.id.tv_name)
+        @BindView(R.id.tv_name)
         public TextView tv_name;
 
-        @Bind(R.id.tv_action1)
+        @BindView(R.id.tv_company)
+        public TextView tv_company;
+
+        @BindView(R.id.tv_money)
+        public TextView tv_money;
+
+        @BindView(R.id.tv_action1)
         public TextView tv_action1;
 
-        @Bind(R.id.tv_action2)
+        @BindView(R.id.tv_action2)
         public TextView tv_action2;
 
-        @Bind(R.id.tv_action3)
+        @BindView(R.id.tv_action3)
         public TextView tv_action3;
 
         @OnClick(R.id.tv_action2)
@@ -119,13 +125,14 @@ public class OrderListAdapter1 extends BaseAdapter {
         });
         vh.checkBox.setChecked(mListView.isItemChecked(position));
 
-
         vh.tv_name.setText(order1.getName());
+        vh.tv_company.setText(order1.getCompany());
+        vh.tv_money.setText(order1.getMoney());
         vh.tv_action1.setText(order1.getAction1());
         vh.tv_action2.setText(order1.getAction2());
         vh.tv_action3.setText(order1.getAction3());
 
-        if (order1.getName().equals("未输入客户名称")) {
+        if (order1.getName().equals("请填写收货人名称")) {
             vh.tv_name.setTextColor(mContext.getResources().getColor(R.color.text_gray1));
         } else {
             vh.tv_name.setTextColor(mContext.getResources().getColor(R.color.black));

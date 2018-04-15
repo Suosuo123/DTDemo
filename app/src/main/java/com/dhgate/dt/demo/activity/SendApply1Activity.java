@@ -15,7 +15,7 @@ import com.dhgate.dt.demo.widget.WinToast;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class SendApply1Activity extends BaseActivity {
@@ -26,10 +26,10 @@ public class SendApply1Activity extends BaseActivity {
         return R.layout.activity_send_apply1;
     }
 
-    @Bind(R.id.cb_all)
+    @BindView(R.id.cb_all)
     public CheckBox cb_all;
 
-    @Bind(R.id.lv_product)
+    @BindView(R.id.lv_product)
     public ListView lv_product;
 
     @OnClick(R.id.iv_make_package)

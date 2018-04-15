@@ -14,7 +14,7 @@ import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
 import com.dhgate.dt.demo.widget.slidingUpPanel.SlidingUpPanelLayout;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class SendApply2Activity extends BaseActivity {
@@ -25,13 +25,13 @@ public class SendApply2Activity extends BaseActivity {
         return R.layout.activity_send_apply2;
     }
 
-    @Bind(R.id.sliding_layout)
+    @BindView(R.id.sliding_layout)
     public SlidingUpPanelLayout sliding_layout;
 
-    @Bind(R.id.rel_complete_order)
+    @BindView(R.id.rel_complete_order)
     public RelativeLayout rel_complete_order;
 
-    @Bind(R.id.rel_package)
+    @BindView(R.id.rel_package)
     public RelativeLayout rel_package;
 
 

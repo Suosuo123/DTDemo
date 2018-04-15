@@ -10,7 +10,7 @@ import com.dhgate.dt.demo.wheelview.wheel.WheelView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -19,10 +19,10 @@ import butterknife.OnClick;
 
 public class SwapActivity1 extends BaseActivity {
 
-    @Bind(R.id.wv1)
+    @BindView(R.id.wv1)
     WheelView wheelView;
 
-    @Bind(R.id.wv2)
+    @BindView(R.id.wv2)
     WheelView wheelView2;
 
     @OnClick(R.id.swap_btn)

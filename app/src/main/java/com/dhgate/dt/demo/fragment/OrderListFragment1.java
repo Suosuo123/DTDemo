@@ -18,7 +18,7 @@ import com.dhgate.dt.demo.widget.WinToast;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class OrderListFragment1 extends BaseFragment {
@@ -36,7 +36,7 @@ public class OrderListFragment1 extends BaseFragment {
         return R.layout.fragment_order_list1;
     }
 
-    @Bind(R.id.lv_product)
+    @BindView(R.id.lv_product)
     public ListView lv_product;
 
     @OnClick(R.id.tv_send)
@@ -65,14 +65,13 @@ public class OrderListFragment1 extends BaseFragment {
         lv_product.setAdapter(mAdapter);
         lv_product.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
 
-
-        Order1 order1 = new Order1("未输入客户名称", "未付定金", "付款", "");
-        Order1 order2 = new Order1("高捷零配件有限公司", "定金已付", "付款", "付款延期");
-        Order1 order3 = new Order1("未输入客户名称", "备货中", "送仓申请", "送仓延期");
-        Order1 order4 = new Order1("未输入客户名称", "备货中", "催交货", "");
-        Order1 order5 = new Order1("未输入客户名称", "对方删除", "同意", "拒绝");
-        Order1 order6 = new Order1("未输入客户名称", "对方删除", "拆单", "接单");
-        Order1 order7 = new Order1("未输入客户名称", "对方删除", "同意", "拒绝");
+        Order1 order1 = new Order1("MOHAMED", "广州金行电子科技", "¥25475.00", "定金已付", "付款", "付款延期");
+        Order1 order2 = new Order1("请填写收货人名称", "高捷零配件有限公司", "¥15000.00", "定金已付", "付款", "付款延期");
+        Order1 order3 = new Order1("请填写收货人名称", "天翼贸易有限公司", "¥386670.00", "备货中", "送仓申请", "送仓延期");
+        Order1 order4 = new Order1("请填写收货人名称", "瑞亭贸易有限公司", "¥764000.00", "备货中", "催交货", "");
+        Order1 order5 = new Order1("请填写收货人名称", "华南日通有限公司", "¥304550.00", "对方删除", "同意", "拒绝");
+        Order1 order6 = new Order1("请填写收货人名称", "华澳贸易有限公司", "¥43000.00", "对方删除", "拆单", "拆单");
+        Order1 order7 = new Order1("请填写收货人名称", "成达信息科技公司", "¥50000.00", "对方删除", "同意", "拒绝");
 
         mList.add(order1);
         mList.add(order2);

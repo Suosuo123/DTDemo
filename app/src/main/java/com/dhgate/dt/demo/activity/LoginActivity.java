@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -21,16 +21,16 @@ import butterknife.OnClick;
 public class LoginActivity extends BaseActivity {
 
 
-    @Bind(R.id.user_name_et)
+    @BindView(R.id.user_name_et)
     EditText user_name_et;
 
-    @Bind(R.id.user_pwd_et)
+    @BindView(R.id.user_pwd_et)
     EditText user_pwd_et;
 
-    @Bind(R.id.user_name_tv)
+    @BindView(R.id.user_name_tv)
     TextView user_name_tv;
 
-    @Bind(R.id.user_pwd_tv)
+    @BindView(R.id.user_pwd_tv)
     TextView user_pwd_tv;
 
     @OnClick(R.id.login_btn)

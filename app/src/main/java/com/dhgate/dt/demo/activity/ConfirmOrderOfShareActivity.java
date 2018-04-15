@@ -10,12 +10,12 @@ import com.dhgate.dt.demo.widget.WrapContentListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class ConfirmOrderOfShareActivity extends BaseActivity {
 
-    @Bind(R.id.lv_product)
+    @BindView(R.id.lv_product)
     public WrapContentListView lv_product;
 
 

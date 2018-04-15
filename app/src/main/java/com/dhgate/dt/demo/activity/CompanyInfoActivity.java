@@ -4,7 +4,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.dhgate.dt.demo.R;
-import butterknife.Bind;
+
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -18,13 +19,13 @@ public class CompanyInfoActivity extends BaseActivity {
         return R.layout.activity_companyinfo;
     }
 
-    @Bind(R.id.confirm_btn)
+    @BindView(R.id.confirm_btn)
     ImageView confirm_btn;
 
-    @Bind(R.id.return_btn)
+    @BindView(R.id.return_btn)
     ImageView return_btn;
 
-    @Bind(R.id.company_img_2)
+    @BindView(R.id.company_img_2)
     ImageView company_img_2;
 
     @OnClick(R.id.confirm_btn)

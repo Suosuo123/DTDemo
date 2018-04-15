@@ -18,7 +18,7 @@ import com.dhgate.dt.demo.widget.WinToast;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -69,10 +69,22 @@ public class OrderListAdapter2 extends BaseAdapter {
 
     public class ViewHolder {
 
-        @Bind(R.id.tv_logistics_type)
+        @BindView(R.id.tv_number)
+        public TextView tv_number;
+
+        @BindView(R.id.tv_date)
+        public TextView tv_date;
+
+        @BindView(R.id.tv_company)
+        public TextView tv_company;
+
+        @BindView(R.id.tv_money)
+        public TextView tv_money;
+
+        @BindView(R.id.tv_logistics_type)
         public TextView tv_logistics_type;
 
-        @Bind(R.id.tv_action1)
+        @BindView(R.id.tv_action1)
         public TextView tv_action1;
 
         @OnClick(R.id.tv_action1)
@@ -94,6 +106,10 @@ public class OrderListAdapter2 extends BaseAdapter {
         }
         ViewHolder vh = (ViewHolder) view.getTag();
 
+        vh.tv_number.setText(order2.getBillNumber());
+        vh.tv_date.setText(order2.getDate());
+        vh.tv_company.setText(order2.getCompany());
+        vh.tv_money.setText(order2.getMoney());
         vh.tv_action1.setText(order2.getAction1());
         vh.tv_logistics_type.setText(order2.getTv_logistics_type());
 

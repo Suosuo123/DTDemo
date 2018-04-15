@@ -13,7 +13,7 @@ import com.dhgate.dt.demo.activity.SelectProductListActivity;
 import com.dhgate.dt.demo.utils.CommonUtils;
 import com.dhgate.dt.demo.widget.WinToast;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class AddProductFragment extends BaseFragment {
@@ -28,7 +28,7 @@ public class AddProductFragment extends BaseFragment {
         return R.layout.fragment_add_product;
     }
 
-    @Bind(R.id.et_search)
+    @BindView(R.id.et_search)
     public EditText et_search;
 
     @OnClick(R.id.iv_add)
