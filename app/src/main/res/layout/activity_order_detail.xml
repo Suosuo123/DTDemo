@@ -26,25 +26,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/img_order_detail1" />
+                    android:src="@mipmap/img_order_detail11" />
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="15dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/img_order_detail2" />
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@mipmap/img_order_detail2" />-->
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginTop="15dp"
-                    android:scaleType="fitXY"
-                    android:src="@mipmap/img_order_detail3" />
+                <!--<ImageView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:layout_marginTop="15dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--android:src="@mipmap/img_order_detail3" />-->
             </LinearLayout>
 
             <RelativeLayout

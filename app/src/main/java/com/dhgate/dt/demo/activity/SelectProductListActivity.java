@@ -17,7 +17,7 @@ import com.dhgate.dt.demo.widget.WinToast;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class SelectProductListActivity extends BaseActivity {
@@ -28,10 +28,10 @@ public class SelectProductListActivity extends BaseActivity {
         return R.layout.activity_product_list;
     }
 
-    @Bind(R.id.et_search)
+    @BindView(R.id.et_search)
     public EditText et_search;
 
-    @Bind(R.id.lv_product)
+    @BindView(R.id.lv_product)
     public ListView lv_product;
 
     @Nullable

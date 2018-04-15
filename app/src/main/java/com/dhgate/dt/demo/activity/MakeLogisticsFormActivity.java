@@ -20,7 +20,7 @@ import org.json.JSONArray;
 
 import java.util.ArrayList;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class MakeLogisticsFormActivity extends BaseActivity {
@@ -30,34 +30,34 @@ public class MakeLogisticsFormActivity extends BaseActivity {
         return R.layout.activity_make_logistics;
     }
 
-    @Bind(R.id.iv_logistics_type1)
+    @BindView(R.id.iv_logistics_type1)
     ImageView iv_logistics_type1;
 
-    @Bind(R.id.tv_city1)
+    @BindView(R.id.tv_city1)
     TextView tv_city1;
 
-    @Bind(R.id.tv_city2)
+    @BindView(R.id.tv_city2)
     TextView tv_city2;
 
-    @Bind(R.id.tv_city3)
+    @BindView(R.id.tv_city3)
     TextView tv_city3;
 
-    @Bind(R.id.tv_select_contact1)
+    @BindView(R.id.tv_select_contact1)
     TextView tv_select_contact1;
 
-    @Bind(R.id.tv_select_contact2)
+    @BindView(R.id.tv_select_contact2)
     TextView tv_select_contact2;
 
-    @Bind(R.id.iv_select_contact1)
+    @BindView(R.id.iv_select_contact1)
     ImageView iv_select_contact1;
 
-    @Bind(R.id.iv_select_contact2)
+    @BindView(R.id.iv_select_contact2)
     ImageView iv_select_contact2;
 
-    @Bind(R.id.ll_select_contact)
+    @BindView(R.id.ll_select_contact)
     LinearLayout ll_select_contact;
 
-    @Bind(R.id.ll_select_contact1)
+    @BindView(R.id.ll_select_contact1)
     LinearLayout ll_select_contact1;
 
     @OnClick(R.id.iv_logistics_type1)

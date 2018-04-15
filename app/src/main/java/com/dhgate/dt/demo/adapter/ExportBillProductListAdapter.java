@@ -16,7 +16,7 @@ import com.dhgate.dt.demo.entity.SendApplyProduct;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
@@ -66,19 +66,19 @@ public class ExportBillProductListAdapter extends BaseAdapter {
 
     public class ViewHolder {
 
-        @Bind(R.id.checkbox)
+        @BindView(R.id.checkbox)
         public CheckBox checkBox;
 
-        @Bind(R.id.tv_single_price)
+        @BindView(R.id.tv_single_price)
         public TextView tv_single_price;
 
-        @Bind(R.id.item_price_total)
+        @BindView(R.id.item_price_total)
         public TextView tv_item_price_total;
 
-        @Bind(R.id.tv_name)
+        @BindView(R.id.tv_name)
         public TextView tv_name;
 
-        @Bind(R.id.tv_count)
+        @BindView(R.id.tv_count)
         public TextView tv_count;
 
     }

@@ -17,7 +17,7 @@ import com.dhgate.dt.demo.widget.PagerSlidingTabStrip;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 public class OrderManagementActivity extends BaseActivity {
 
@@ -27,10 +27,10 @@ public class OrderManagementActivity extends BaseActivity {
         return R.layout.activity_order_management;
     }
 
-    @Bind(R.id.tabs)
+    @BindView(R.id.tabs)
     public PagerSlidingTabStrip mPagerSlidingTabStrip;
 
-    @Bind(R.id.pager)
+    @BindView(R.id.pager)
     public ViewPager mViewPager;
 
     private MyPagerAdapter mPagerAdapter;

@@ -26,7 +26,7 @@ import com.dhgate.dt.demo.widget.swipeMenuListView.SwipeMenuListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class CreateOrderFragment extends BaseFragment {
@@ -45,7 +45,7 @@ public class CreateOrderFragment extends BaseFragment {
         return R.layout.fragment_create_order;
     }
 
-    @Bind(R.id.lv_product)
+    @BindView(R.id.lv_product)
     public MySwipeMenuListView lv_product;
 
     public TextView tv_money;
@@ -53,12 +53,12 @@ public class CreateOrderFragment extends BaseFragment {
     private OrderProductListAdapter mAdapter;
     private List<Product> mList = new ArrayList<>();
 
-    private int mTotalCount = 3;
+//    private int mTotalCount = 3;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mTotalCount = getArguments().getInt("count", 3);
+//        mTotalCount = getArguments().getInt("count", 3);
     }
 
     @Override

@@ -5,7 +5,7 @@ import android.content.Intent;
 import com.dhgate.dt.demo.R;
 import com.jungly.gridpasswordview.GridPasswordView;
 
-import butterknife.Bind;
+import butterknife.BindView;
 
 /**
  * Created by flora on 2018/4/11.
@@ -13,7 +13,7 @@ import butterknife.Bind;
 
 public class EnterPaymentPwdActivity extends BaseActivity {
 
-    @Bind(R.id.gridpassword)
+    @BindView(R.id.gridpassword)
     GridPasswordView gridPasswordView;
 
     @Override

@@ -6,7 +6,7 @@ import android.widget.RelativeLayout;
 
 import com.dhgate.dt.demo.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -72,7 +72,7 @@ public class MyAccountQRActivity extends BaseActivity {
         qrcode_layout.setVisibility(View.GONE);
     }
 
-    @Bind(R.id.qrcode_layout)
+    @BindView(R.id.qrcode_layout)
     RelativeLayout qrcode_layout;
 
     @Override

@@ -5,8 +5,6 @@ import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -54,7 +52,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class CreateOrderActivity extends BaseActivity {
@@ -64,55 +62,55 @@ public class CreateOrderActivity extends BaseActivity {
         return R.layout.activity_create_order;
     }
 
-    @Bind(R.id.sliding_layout)
+    @BindView(R.id.sliding_layout)
     public SlidingUpPanelLayout sliding_layout;
 
-    @Bind(R.id.viewPager)
+    @BindView(R.id.viewPager)
     public ViewPager viewPager;
 
-    @Bind(R.id.iv_left)
+    @BindView(R.id.iv_left)
     public ImageView iv_left;
 
-    @Bind(R.id.iv_right1)
+    @BindView(R.id.iv_right1)
     public ImageView iv_right;
 
-    @Bind(R.id.rel_complete_order)
+    @BindView(R.id.rel_complete_order)
     public RelativeLayout rel_complete_order;
 
-    @Bind(R.id.tv_date_1_1)
+    @BindView(R.id.tv_date_1_1)
     public TextView tv_date_1_1;
-    @Bind(R.id.tv_date_1_2)
+    @BindView(R.id.tv_date_1_2)
     public TextView tv_date_1_2;
-    @Bind(R.id.tv_date_1_3)
+    @BindView(R.id.tv_date_1_3)
     public TextView tv_date_1_3;
 
-    @Bind(R.id.tv_date_2_1)
+    @BindView(R.id.tv_date_2_1)
     public TextView tv_date_2_1;
-    @Bind(R.id.tv_date_2_2)
+    @BindView(R.id.tv_date_2_2)
     public TextView tv_date_2_2;
-    @Bind(R.id.tv_date_2_3)
+    @BindView(R.id.tv_date_2_3)
     public TextView tv_date_2_3;
 
-    @Bind(R.id.et_money)
+    @BindView(R.id.et_money)
     public EditText et_money;
 
-    @Bind(R.id.tv_total)
+    @BindView(R.id.tv_total)
     public TextView tv_total;
 
-    @Bind(R.id.tv_balance)
+    @BindView(R.id.tv_balance)
     public TextView tv_balance;
 
-    @Bind(R.id.tv_day_range)
+    @BindView(R.id.tv_day_range)
     public TextView tv_day_range;
 
 
-    @Bind(R.id.ll_date_content)
+    @BindView(R.id.ll_date_content)
     public LinearLayout ll_date_content;
 
-    @Bind(R.id.tv_city1)
+    @BindView(R.id.tv_city1)
     public TextView tv_city1;
 
-    @Bind(R.id.tv_city2)
+    @BindView(R.id.tv_city2)
     public TextView tv_city2;
 
     @OnClick(R.id.iv_left)
@@ -291,7 +289,6 @@ public class CreateOrderActivity extends BaseActivity {
         mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mPagerAdapter);
 
-        mFragments.clear();
         mFragments.add(CreateOrderFragment.newInstance(mProductNum));
         mFragments.add(ProductsManagementFragment.newInstance(10));
 

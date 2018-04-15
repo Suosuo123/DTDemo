@@ -1,5 +1,6 @@
 package com.dhgate.dt.demo.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
@@ -8,6 +9,7 @@ import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.activity.CreateOrderActivity;
+import com.dhgate.dt.demo.activity.EditProductActivity;
 import com.dhgate.dt.demo.adapter.ProductManagementListAdapter;
 import com.dhgate.dt.demo.entity.Product;
 import com.dhgate.dt.demo.widget.WinToast;
@@ -15,7 +17,7 @@ import com.dhgate.dt.demo.widget.WinToast;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class ProductsManagementFragment extends BaseFragment {
@@ -34,7 +36,7 @@ public class ProductsManagementFragment extends BaseFragment {
         return R.layout.fragment_product_management;
     }
 
-    @Bind(R.id.lv_product)
+    @BindView(R.id.lv_product)
     public ListView lv_product;
 
     @OnClick(R.id.tv_add_to_order)
@@ -45,6 +47,12 @@ public class ProductsManagementFragment extends BaseFragment {
         }
 
         ((CreateOrderActivity) mActivity).changePageToOrder(lv_product.getCheckedItemCount());
+    }
+
+    @OnClick(R.id.iv_add)
+    public void addProductClick() {
+        Intent intent = new Intent(mActivity, EditProductActivity.class);
+        startActivity(intent);
     }
 
 

@@ -6,7 +6,7 @@ import android.widget.LinearLayout;
 
 import com.dhgate.dt.demo.R;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class OrderDetailActivity extends BaseActivity {
@@ -17,13 +17,13 @@ public class OrderDetailActivity extends BaseActivity {
         return R.layout.activity_order_detail;
     }
 
-    @Bind(R.id.ll_more)
+    @BindView(R.id.ll_more)
     public LinearLayout ll_more;
 
-    @Bind(R.id.iv_order_detail4)
+    @BindView(R.id.iv_order_detail4)
     public ImageView iv_order_detail4;
 
-    @Bind(R.id.iv_order_detail5)
+    @BindView(R.id.iv_order_detail5)
     public ImageView iv_order_detail5;
 
     @OnClick(R.id.rel_open)

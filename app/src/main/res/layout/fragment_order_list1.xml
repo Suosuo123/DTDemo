@@ -75,7 +75,7 @@
         android:layout_height="50dp"
         android:background="@mipmap/btn_red_bg"
         android:gravity="center"
-        android:text="我要发运"
+        android:text="发运"
         android:textColor="@color/white"
         android:textSize="15sp" />
 

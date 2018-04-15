@@ -3,7 +3,7 @@ package com.dhgate.dt.demo.activity;
 import android.view.View;
 import android.widget.ImageView;
 import com.dhgate.dt.demo.R;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -12,10 +12,10 @@ import butterknife.OnClick;
 
 public class USDAccountActivity extends BaseActivity {
 
-    @Bind(R.id.click_img1)
+    @BindView(R.id.click_img1)
     ImageView click_img1;
 
-    @Bind(R.id.click_img2)
+    @BindView(R.id.click_img2)
     ImageView click_img2;
 
     @OnClick(R.id.btn_1)

@@ -17,7 +17,7 @@ import com.dhgate.dt.demo.entity.SendApplyProduct;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
@@ -67,19 +67,19 @@ public class SendApplyProductListAdapter extends BaseAdapter {
 
     public class ViewHolder {
 
-        @Bind(R.id.checkbox)
+        @BindView(R.id.checkbox)
         public CheckBox checkBox;
 
-        @Bind(R.id.iv_icon)
+        @BindView(R.id.iv_icon)
         public ImageView iv_icon;
 
-        @Bind(R.id.tv_mode)
+        @BindView(R.id.tv_mode)
         public TextView tv_mode;
 
-        @Bind(R.id.tv_name)
+        @BindView(R.id.tv_name)
         public TextView tv_name;
 
-        @Bind(R.id.tv_count)
+        @BindView(R.id.tv_count)
         public TextView tv_count;
 
     }

@@ -24,7 +24,7 @@ import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class ExportBillActivity extends BaseActivity {
@@ -34,19 +34,19 @@ public class ExportBillActivity extends BaseActivity {
         return R.layout.activity_export_bill;
     }
 
-    @Bind(R.id.ll_content1)
+    @BindView(R.id.ll_content1)
     public LinearLayout ll_content1;
 
-    @Bind(R.id.ll_content2)
+    @BindView(R.id.ll_content2)
     public LinearLayout ll_content2;
 
-    @Bind(R.id.lv_product)
+    @BindView(R.id.lv_product)
     public ListView lv_product;
 
-    @Bind(R.id.iv_content1)
+    @BindView(R.id.iv_content1)
     public ImageView iv_content1;
 
-    @Bind(R.id.iv_content2)
+    @BindView(R.id.iv_content2)
     public ImageView iv_content2;
 
     @OnClick(R.id.iv_quick_create)

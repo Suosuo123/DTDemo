@@ -17,7 +17,7 @@ import com.dhgate.dt.demo.entity.Contact;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -71,7 +71,7 @@ public class SelectContactListAdapter extends BaseAdapter {
 
     public class ViewHolder {
 
-        @Bind(R.id.iv_content)
+        @BindView(R.id.iv_content)
         public ImageView iv_content;
 
 

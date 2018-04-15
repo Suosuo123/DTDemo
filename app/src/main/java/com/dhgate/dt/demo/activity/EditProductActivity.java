@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.dhgate.dt.demo.R;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 /**
@@ -24,19 +24,19 @@ public class EditProductActivity extends BaseActivity {
     public int categoryHeight;
     public String choosedStr;
 
-    @Bind(R.id.choose_layout_1_text)
+    @BindView(R.id.choose_layout_1_text)
     TextView choose_layout_1_text;
 
-    @Bind(R.id.category_content_layout)
+    @BindView(R.id.category_content_layout)
     LinearLayout category_content_layout;
 
-    @Bind(R.id.shadow)
+    @BindView(R.id.shadow)
     View shadow;
 
-    @Bind(R.id.category_layout1_check)
+    @BindView(R.id.category_layout1_check)
     ImageView category_layout1_check;
 
-    @Bind(R.id.category_layout2_check)
+    @BindView(R.id.category_layout2_check)
     ImageView category_layout2_check;
 
     @OnClick(R.id.choose_layout_1)

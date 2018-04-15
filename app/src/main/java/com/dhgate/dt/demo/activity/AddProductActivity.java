@@ -13,7 +13,7 @@ import com.dhgate.dt.demo.fragment.ProductsManagementFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.OnClick;
 
 public class AddProductActivity extends BaseActivity implements ViewPager.OnPageChangeListener {
@@ -23,13 +23,13 @@ public class AddProductActivity extends BaseActivity implements ViewPager.OnPage
         return R.layout.activity_add_product;
     }
 
-    @Bind(R.id.viewPager)
+    @BindView(R.id.viewPager)
     public ViewPager viewPager;
 
-    @Bind(R.id.iv_left)
+    @BindView(R.id.iv_left)
     public ImageView iv_left;
 
-    @Bind(R.id.iv_right1)
+    @BindView(R.id.iv_right1)
     public ImageView iv_right;
 
     @OnClick(R.id.iv_left)
