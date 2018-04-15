@@ -100,7 +100,7 @@ public class CreateOrderFragment extends BaseFragment {
 
     public void addProduct(int count) {
         for (int i = 0; i < count; i++) {
-            mList.add(new Product());
+            mList.add(new Product(R.mipmap.manage_product5, "带灯插卡金属音箱", "a10", 10, 800, 8000));
         }
         mAdapter.updateList(mList);
 

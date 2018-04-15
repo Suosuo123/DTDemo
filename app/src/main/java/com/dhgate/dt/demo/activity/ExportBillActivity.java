@@ -118,9 +118,9 @@ public class ExportBillActivity extends BaseActivity {
         lv_product.setAdapter(mAdapter);
         lv_product.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
 
-        mList.add(new SendApplyProduct("iPhone 6p 手机壳", 3, 500, 1500));
-        mList.add(new SendApplyProduct("蓝牙插卡电话智能手表", 30, 0.18f, 20.01f));
-        mList.add(new SendApplyProduct("蓝牙插卡电话智能手表", 2, 50, 100));
+        mList.add(new SendApplyProduct("蓝牙插卡电话智能手表", 40, 135, 5400));
+        mList.add(new SendApplyProduct("iPhone 7p 手机壳", 70, 225, 1575));
+        mList.add(new SendApplyProduct("iPhone x 手机壳", 865, 5, 4325));
 
         mAdapter.updateList(mList);
 

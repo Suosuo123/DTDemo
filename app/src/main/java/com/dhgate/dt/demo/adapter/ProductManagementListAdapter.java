@@ -6,7 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.entity.Product;
@@ -63,12 +65,25 @@ public class ProductManagementListAdapter extends BaseAdapter {
     }
 
     public class ViewHolder {
+
         @BindView(R.id.checkbox)
         public CheckBox checkBox;
+
+        @BindView(R.id.iv_icon)
+        public ImageView iv_icon;
+
+        @BindView(R.id.tv_mode)
+        public TextView tv_mode;
+
+        @BindView(R.id.tv_name)
+        public TextView tv_name;
+
     }
 
     @Override
     public View getView(final int position, View convertView, ViewGroup arg2) {
+        Product product = mList.get(position);
+
         View view = convertView;
         if (view == null) {
             ViewHolder vh = new ViewHolder();
@@ -86,6 +101,10 @@ public class ProductManagementListAdapter extends BaseAdapter {
             }
         });
         vh.checkBox.setChecked(mListView.isItemChecked(position));
+
+        vh.iv_icon.setImageResource(product.getIconResId());
+        vh.tv_name.setText(product.getName());
+        vh.tv_mode.setText(product.getMode());
         return view;
     }
 

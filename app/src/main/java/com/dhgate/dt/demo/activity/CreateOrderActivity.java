@@ -290,7 +290,7 @@ public class CreateOrderActivity extends BaseActivity {
         viewPager.setAdapter(mPagerAdapter);
 
         mFragments.add(CreateOrderFragment.newInstance(mProductNum));
-        mFragments.add(ProductsManagementFragment.newInstance(10));
+        mFragments.add(ProductsManagementFragment.newInstance(2));
 
         mPagerAdapter.update(mFragments);
 

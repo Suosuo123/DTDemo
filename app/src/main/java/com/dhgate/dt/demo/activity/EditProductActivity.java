@@ -3,15 +3,14 @@ package com.dhgate.dt.demo.activity;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.graphics.Color;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.dhgate.dt.demo.R;
+
 import butterknife.BindView;
 import butterknife.OnClick;
 
@@ -63,6 +62,11 @@ public class EditProductActivity extends BaseActivity {
         category_layout2_check.setVisibility(View.VISIBLE);
         choose_layout_1_text.setText("橡胶及其它制品");
         hideAnim();
+    }
+
+    @OnClick(R.id.iv_save)
+    public void saveClick() {
+        finish();
     }
 
     @Override

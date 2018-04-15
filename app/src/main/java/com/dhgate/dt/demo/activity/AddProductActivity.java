@@ -57,7 +57,7 @@ public class AddProductActivity extends BaseActivity implements ViewPager.OnPage
 
         mFragments = new ArrayList<>();
         mFragments.add(AddProductFragment.newInstance());
-        mFragments.add(ProductsManagementFragment.newInstance(10));
+        mFragments.add(ProductsManagementFragment.newInstance(1));
         mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(mPagerAdapter);
         viewPager.addOnPageChangeListener(this);
@@ -74,10 +74,14 @@ public class AddProductActivity extends BaseActivity implements ViewPager.OnPage
             case 0:
                 iv_left.setImageResource(R.mipmap.left_selected);
                 iv_right.setImageResource(R.mipmap.right_normal);
+
+                setActionTitle("订单");
                 break;
             case 1:
                 iv_left.setImageResource(R.mipmap.left_normal);
                 iv_right.setImageResource(R.mipmap.right_selected);
+
+                setActionTitle("商品管理");
                 break;
             default:
                 break;
