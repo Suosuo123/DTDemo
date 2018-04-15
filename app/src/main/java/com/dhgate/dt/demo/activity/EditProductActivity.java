@@ -64,8 +64,13 @@ public class EditProductActivity extends BaseActivity {
         hideAnim();
     }
 
+<<<<<<< HEAD
     @OnClick(R.id.iv_save)
     public void saveClick() {
+=======
+    @OnClick(R.id.save_btn)
+    public void onSaveClick() {
+>>>>>>> 3c25c774f17b1f99c35aa22ce3472f9cb2641323
         finish();
     }
 

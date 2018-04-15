@@ -210,7 +210,7 @@
         android:id="@+id/qrcode_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="68dp"
         android:visibility="gone">
 
         <ImageView

@@ -95,7 +95,11 @@
     </ScrollView>
 
     <ImageView
+<<<<<<< HEAD
         android:id="@+id/iv_save"
+=======
+        android:id="@+id/save_btn"
+>>>>>>> 3c25c774f17b1f99c35aa22ce3472f9cb2641323
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@mipmap/add_product_4"

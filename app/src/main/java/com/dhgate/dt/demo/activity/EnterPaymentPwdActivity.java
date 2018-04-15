@@ -35,6 +35,7 @@ public class EnterPaymentPwdActivity extends BaseActivity {
             public void onInputFinish(String psw) {
                 Intent intent = new Intent(EnterPaymentPwdActivity.this, PaymentSuccessActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }

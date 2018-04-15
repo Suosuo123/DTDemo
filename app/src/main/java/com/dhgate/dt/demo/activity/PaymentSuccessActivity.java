@@ -16,7 +16,7 @@ public class PaymentSuccessActivity extends BaseActivity {
 
     @OnClick(R.id.return_icon)
     public void onReturnClick() {
-
+        finish();
     }
 
     @Override
