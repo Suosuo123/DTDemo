@@ -16,7 +16,7 @@ import butterknife.OnClick;
 
 public class MyAccountActivity extends BaseActivity {
 
-//    @BindView(R.id.sliding_layout)
+    //    @BindView(R.id.sliding_layout)
     @BindView(R.id.sliding_layout)
     public SlidingUpPanelLayout sliding_layout;
 
@@ -48,7 +48,8 @@ public class MyAccountActivity extends BaseActivity {
 
     @OnClick(R.id.my_bisness_2)
     public void onBtn2Click() {
-
+        Intent intent = new Intent(mActivity, OrderManagementActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.my_bisness_3)

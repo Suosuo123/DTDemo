@@ -21,6 +21,7 @@ import com.dhgate.dt.demo.widget.uiView.UIImageView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Optional;
 
 
 @SuppressLint("NewApi")
@@ -48,25 +49,26 @@ public abstract class BaseActivity extends SwipeBackActivity {
     public TextView tv_title;
 
     @Nullable
-    @OnClick(R.id.iv_back)
-    public void back() {
-        finish();
-    }
-
-    @Nullable
     @BindView(R.id.iv_right)
     public UIImageView iv_right;
+
+    @Nullable
+    @Optional
+    @OnClick(R.id.iv_back)
+    public void backClick(View view) {
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = this;
 
-        initWindow(R.color.main_gray);
-
         setContentView(getLayoutId());
 
         ButterKnife.bind(mActivity);
+
+        initWindow(R.color.main_gray);
 
         setSwipeBackEnable(true);//禁止滑动关闭界面
 
