@@ -1,5 +1,6 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import com.dhgate.dt.demo.R;
@@ -20,7 +21,8 @@ public class USDAccountActivity extends BaseActivity {
 
     @OnClick(R.id.btn_1)
     public void onBtn1Click() {
-
+        Intent intent = new Intent(USDAccountActivity.this, SwapActivity1.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.btn_2)

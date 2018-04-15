@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/rel_title"
+        layout="@layout/layout_title_bar" />
+
+    <RelativeLayout
+        android:id="@+id/input_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/swap2_1"
+        android:layout_below="@+id/rel_title"
+        android:layout_marginTop="20dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp">
+
+            <TextView
+                android:id="@+id/usd_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textColor="#6B7B94"
+                android:textSize="20sp"
+                android:alpha="0.35"/>
+            <EditText
+                android:id="@+id/usd_et"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/usd_tv"
+                android:textColor="#387AD3"
+                android:textSize="30sp"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="number|numberDecimal"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#6B7B94"
+                android:layout_below="@+id/usd_et"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/confirm_btn_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/swap2_2"
+        android:layout_below="@+id/input_content"/>
+
+    <ImageView
+        android:id="@+id/confirm_btn_blue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/swap2_3"
+        android:layout_below="@+id/input_content"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/swap_success_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#59000000"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/swap2_4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

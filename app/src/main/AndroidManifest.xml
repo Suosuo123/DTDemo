@@ -106,7 +106,13 @@
         <activity
             android:name=".activity.USDAccountActivity"
             android:configChanges="orientation|screenSize|locale"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
 
 
         <activity
@@ -169,6 +175,19 @@
 
         <activity
             android:name=".activity.PersonalInfoActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+
+        <activity
+            android:name=".activity.SwapActivity1"
+            android:configChanges="orientation|screenSize|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
+        <activity
+            android:name=".activity.SwapActivity2"
             android:configChanges="orientation|screenSize|locale"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"></activity>
