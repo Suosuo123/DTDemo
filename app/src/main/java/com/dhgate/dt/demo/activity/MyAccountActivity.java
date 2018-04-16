@@ -86,6 +86,7 @@ public class MyAccountActivity extends BaseActivity {
     @Override
     protected void onCreate() {
         super.onCreate();
+        setSwipeBackEnable(false);
     }
 
     @Override
