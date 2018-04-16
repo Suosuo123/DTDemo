@@ -38,7 +38,7 @@
             android:layout_below="@+id/user_name_tv"
             android:textSize="18sp"
             android:background="@null"
-            android:text="Abdo Mohammed"
+            android:text="Nick Wong"
             android:hint="用户名"
             android:textColorHint="#6B7B94"
             android:textColor="#3B3C3F"
