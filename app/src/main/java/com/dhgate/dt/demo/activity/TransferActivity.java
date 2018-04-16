@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import com.bigkoo.pickerview.utils.PickerViewAnimateUtil;
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
+import com.dhgate.dt.demo.utils.CommonUtils;
 import com.dhgate.dt.demo.widget.uiView.UIImageView;
 import com.jungly.gridpasswordview.GridPasswordView;
 import butterknife.BindView;
@@ -89,12 +90,13 @@ public class TransferActivity extends BaseActivity {
             public void onInputFinish(String psw) {
                 ll_password.setVisibility(View.GONE);
                 iv_transfer_success.setVisibility(View.VISIBLE);
+                CommonUtils.hideInputMethod(TransferActivity.this);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         finish();
                     }
-                }, 500);
+                }, 3000);
             }
         });
     }
