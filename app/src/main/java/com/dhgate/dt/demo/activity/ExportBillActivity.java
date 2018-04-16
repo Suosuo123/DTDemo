@@ -20,6 +20,7 @@ import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.adapter.ExportBillProductListAdapter;
 import com.dhgate.dt.demo.entity.SendApplyProduct;
 import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
+import com.dhgate.dt.demo.widget.WrapContentListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,7 +42,7 @@ public class ExportBillActivity extends BaseActivity {
     public LinearLayout ll_content2;
 
     @BindView(R.id.lv_product)
-    public ListView lv_product;
+    public WrapContentListView lv_product;
 
     @BindView(R.id.iv_content1)
     public ImageView iv_content1;

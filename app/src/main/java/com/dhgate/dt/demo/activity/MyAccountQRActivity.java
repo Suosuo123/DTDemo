@@ -49,12 +49,14 @@ public class MyAccountQRActivity extends BaseActivity {
 
     @OnClick(R.id.layout_3)
     public void onLayout3Click() {
-
+        Intent intent = new Intent(mActivity, PersonalInfoActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.layout_4)
     public void onLayout4Click() {
-
+        Intent intent = new Intent(mActivity, CompanyInfoActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.layout_5)
@@ -64,7 +66,8 @@ public class MyAccountQRActivity extends BaseActivity {
 
     @OnClick(R.id.layout_6)
     public void onLayout6Click() {
-
+        Intent intent = new Intent(mActivity, SelectContactActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.qrcode_layout)

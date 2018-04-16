@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:scaleType="fitXY"
         android:src="@mipmap/img_export_bill1" />
 
@@ -21,56 +21,69 @@
         android:id="@+id/ll_content1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp">
 
             <ImageView
                 android:id="@+id/iv_quick_create"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="15dp"
                 android:src="@mipmap/img_export_bill2" />
 
         </RelativeLayout>
 
-        <ListView
-            android:id="@+id/lv_product"
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
-            android:divider="@android:color/transparent"
-            android:dividerHeight="15dp" />
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.dhgate.dt.demo.widget.WrapContentListView
+                    android:id="@+id/lv_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="15dp" />
+
+                <ImageView
+                    android:id="@+id/iv_make_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20dp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_export_bill3" />
+
+                <ImageView
+                    android:id="@+id/iv_merge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="30dp"
+                    android:src="@mipmap/img_export_bill4" />
+            </LinearLayout>
+        </ScrollView>
 
 
-        <ImageView
-            android:id="@+id/iv_make_package"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:scaleType="fitXY"
-            android:src="@mipmap/img_export_bill3" />
-
-        <ImageView
-            android:id="@+id/iv_merge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="40dp"
-            android:src="@mipmap/img_export_bill4" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_content2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:visibility="gone">
 
@@ -82,18 +95,19 @@
             android:textColor="@color/black"
             android:textSize="16sp" />
 
-        <RelativeLayout
+        <LinearLayout
             android:id="@+id/rel_product"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/iv_content1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
                 android:scaleType="fitXY"
                 android:src="@mipmap/img_export_bill7" />
 
@@ -102,11 +116,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
                 android:scaleType="fitXY"
                 android:src="@mipmap/img_export_bill8"
                 android:visibility="gone" />
-        </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_export_bill3" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
