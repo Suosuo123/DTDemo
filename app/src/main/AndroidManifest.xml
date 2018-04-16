@@ -186,6 +186,12 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait"></activity>
 
+        <activity
+            android:name=".activity.TransferActivity"
+            android:configChanges="orientation|screenSize|locale"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"></activity>
+
     </application>
 
 </manifest>

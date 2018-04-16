@@ -27,7 +27,8 @@ public class USDAccountActivity extends BaseActivity {
 
     @OnClick(R.id.btn_2)
     public void onBtn2Click() {
-
+        Intent intent = new Intent(USDAccountActivity.this, TransferActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.click_img1)
