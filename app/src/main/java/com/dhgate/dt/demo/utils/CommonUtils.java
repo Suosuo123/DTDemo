@@ -27,11 +27,14 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.InputStream;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Locale;
 
 public class CommonUtils {
 	public static int dip2pixel(Context context, float n) {
@@ -210,5 +213,17 @@ public class CommonUtils {
 		}
 
 		return data;
+	}
+
+	/**
+	 * double保留两位小数
+	 */
+	public static String to2(double f) {
+		if (f == 0) {
+			return "0.00";
+		}
+		DecimalFormatSymbols otherSymbols = new DecimalFormatSymbols(Locale.ENGLISH);
+		DecimalFormat df = new DecimalFormat("#0.00",otherSymbols);
+		return df.format(f);
 	}
 }

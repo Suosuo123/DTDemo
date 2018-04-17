@@ -9,7 +9,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+
 import com.bigkoo.pickerview.utils.PickerViewAnimateUtil;
+import com.dhgate.dt.demo.MainApplication;
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.utils.AndroidBug54971Workaround;
 import com.dhgate.dt.demo.utils.CommonUtils;
@@ -28,6 +31,9 @@ public class TransferActivity extends BaseActivity {
 
     @BindView(R.id.bank_account_2)
     ImageView bank_account_2;
+
+    @BindView(R.id.transfer_amount_text)
+    TextView transfer_amount_text;
 
     LinearLayout ll_password;
 
@@ -79,6 +85,8 @@ public class TransferActivity extends BaseActivity {
 
     @Override
     protected void initView() {
+        MainApplication application = (MainApplication) getApplication();
+        transfer_amount_text.setText(application.getBalanceStr());
         initShare();
         grid_password.setOnPasswordChangedListener(new GridPasswordView.OnPasswordChangedListener() {
             @Override
@@ -96,7 +104,7 @@ public class TransferActivity extends BaseActivity {
                     public void run() {
                         finish();
                     }
-                }, 3000);
+                }, 1500);
             }
         });
     }
