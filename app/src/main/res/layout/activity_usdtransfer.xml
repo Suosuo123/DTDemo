@@ -112,13 +112,19 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@mipmap/usd_transfer_3"
+                    android:background="@mipmap/usd_transfer_8"
                     android:layout_marginTop="10dp"/>
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@mipmap/usd_transfer_5"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/usd_transfer_6"
                     android:layout_marginBottom="20dp"/>
             </LinearLayout>
         </ScrollView>
@@ -130,13 +136,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@mipmap/usd_transfer_6"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"/>
 
         <ImageView
             android:id="@+id/confirm_btn"
