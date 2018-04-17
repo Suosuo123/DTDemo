@@ -152,12 +152,12 @@ public class CreateOrderActivity extends BaseActivity {
         showShare();
     }
 
-    @OnClick(R.id.tv_confirm_order)
-    public void confirmOrderClick() {
-        Intent intent = new Intent(mActivity, ConfirmOrderOfShareActivity.class);
-        intent.putExtra("count", mProductNum);
-        startActivity(intent);
-    }
+//    @OnClick(R.id.tv_confirm_order)
+//    public void confirmOrderClick() {
+//        Intent intent = new Intent(mActivity, ConfirmOrderOfShareActivity.class);
+//        intent.putExtra("count", mProductNum);
+//        startActivity(intent);
+//    }
 
     private MyPagerAdapter mPagerAdapter;
     private List<Fragment> mFragments = new ArrayList<>();
@@ -559,22 +559,23 @@ public class CreateOrderActivity extends BaseActivity {
             }
         });
 
-        View outView = rootView.findViewById(R.id.outmost_container);
-        outView.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    dismissShare();
-                }
-                return false;
-            }
-        });
+//        View outView = rootView.findViewById(R.id.outmost_container);
+//        outView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//                    dismissShare();
+//                }
+//                return false;
+//            }
+//        });
 
         View closeView = rootView.findViewById(R.id.iv_close_share);
         closeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dismissShare();
+                Intent intent = new Intent(mActivity, MyAccountActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.CheckBox;
 import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
@@ -39,6 +40,9 @@ public class OrderListFragment1 extends BaseFragment {
     @BindView(R.id.lv_product)
     public ListView lv_product;
 
+    @BindView(R.id.checkbox)
+    public CheckBox checkbox;
+
     @OnClick(R.id.tv_send)
     public void addToOrderClick() {
         if (lv_product.getCheckedItemCount() <= 0) {
@@ -49,6 +53,25 @@ public class OrderListFragment1 extends BaseFragment {
         startActivity(intent);
     }
 
+    @OnClick(R.id.rel_select_all)
+    public void selectAllClick() {
+        if (mSelectAll) {
+            selectAll(false);
+        } else {
+            selectAll(true);
+        }
+        mSelectAll = !mSelectAll;
+        checkbox.setChecked(mSelectAll);
+    }
+
+    private void selectAll(boolean selectAll) {
+        for (int i = 0; i < lv_product.getCount(); i++) {
+            lv_product.setItemChecked(i, selectAll);
+        }
+        mAdapter.notifyDataSetChanged();
+    }
+
+    private boolean mSelectAll;
 
     private OrderListAdapter1 mAdapter;
     private List<Order1> mList = new ArrayList<>();
