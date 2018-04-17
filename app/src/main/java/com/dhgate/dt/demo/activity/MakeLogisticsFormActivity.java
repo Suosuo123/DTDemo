@@ -93,13 +93,15 @@ public class MakeLogisticsFormActivity extends BaseActivity {
 
     @OnClick(R.id.iv_dt_logistics)
     public void dtClick() {
-        Intent intent = new Intent(mActivity, ExportBillActivity.class);
+        Intent intent = new Intent(mActivity, OrderManagementActivity.class);
+        intent.putExtra("type", 1);
         startActivity(intent);
     }
 
     @OnClick(R.id.iv_other_logistics)
     public void otherClick() {
-        Intent intent = new Intent(mActivity, ExportBillActivity.class);
+        Intent intent = new Intent(mActivity, OrderManagementActivity.class);
+        intent.putExtra("type", 1);
         startActivity(intent);
     }
 

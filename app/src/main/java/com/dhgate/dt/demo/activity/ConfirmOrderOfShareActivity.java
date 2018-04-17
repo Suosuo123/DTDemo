@@ -1,6 +1,8 @@
 package com.dhgate.dt.demo.activity;
 
 import android.content.Intent;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.adapter.ConfirmOrderProductListAdapter;
@@ -18,14 +20,27 @@ public class ConfirmOrderOfShareActivity extends BaseActivity {
     @BindView(R.id.lv_product)
     public WrapContentListView lv_product;
 
+    @BindView(R.id.ll_bottom2)
+    public LinearLayout ll_bottom2;
 
     @OnClick(R.id.btn_edit)
     public void editClick() {
     }
 
+    @OnClick(R.id.btn_agree)
+    public void agreeClick() {
+        finish();
+    }
+
+    @OnClick(R.id.btn_refuse)
+    public void refuseClick() {
+        finish();
+    }
+
+
     @OnClick(R.id.btn_confirm)
     public void confirmClick() {
-        Intent intent=new Intent(mActivity,OrderManagementActivity.class);
+        Intent intent = new Intent(mActivity, EnterPaymentPwdActivity.class);
         startActivity(intent);
     }
 
@@ -39,11 +54,19 @@ public class ConfirmOrderOfShareActivity extends BaseActivity {
 
     private int mTotalCount = 3;
 
+    private int mType;
+
     @Override
     protected void onCreate() {
         super.onCreate();
 
         mTotalCount = getIntent().getIntExtra("count", 3);
+        mType = getIntent().getIntExtra("type", -1);
+
+        if (mType == 1) {
+            ll_bottom2.setVisibility(View.VISIBLE);
+        }
+
     }
 
     @Override

@@ -94,8 +94,7 @@ public class ExportBillActivity extends BaseActivity {
                 if (mSuccessDialog != null) {
                     mSuccessDialog.dismiss();
                 }
-
-                Intent intent = new Intent(mActivity, ExportManagementActivity.class);
+                Intent intent = new Intent(mActivity, MyAccountActivity.class);
                 startActivity(intent);
                 finish();
             }

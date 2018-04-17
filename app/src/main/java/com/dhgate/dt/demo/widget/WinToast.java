@@ -41,7 +41,7 @@ public class WinToast {
 		tv.setText(text);
 
 		result.setGravity(Gravity.CENTER, 0, 0);
-		result.setDuration(Toast.LENGTH_SHORT);
+		result.setDuration(Toast.LENGTH_LONG);
 		result.show();
 	}
 
@@ -54,8 +54,8 @@ public class WinToast {
 		TextView tv = (TextView) v.findViewById(android.R.id.message);
 		tv.setText(text);
 
-		result.setGravity(Gravity.CENTER, 0, CommonUtils.dip2pixel(context, 150));
-		result.setDuration(Toast.LENGTH_SHORT);
+		result.setGravity(Gravity.CENTER, 0, CommonUtils.dip2pixel(context, 50));
+		result.setDuration(Toast.LENGTH_LONG);
 
 		return result;
 	}

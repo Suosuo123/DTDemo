@@ -2,7 +2,6 @@ package com.dhgate.dt.demo.activity;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -47,17 +46,21 @@ public class OrderManagementActivity extends BaseActivity {
     private MyPagerAdapter mPagerAdapter;
     private List<Fragment> mFragments = new ArrayList<>();
 
+    private int mType;
+
     @Override
     protected void onCreate() {
         super.onCreate();
 
-        setActionBarWhite();
-        setActionTitle("订单管理");
+        mType = getIntent().getIntExtra("type", -1);
     }
 
     @Override
     protected void initView() {
         super.initView();
+
+        setActionBarWhite();
+        setActionTitle("订单管理");
 
         mPagerAdapter = new MyPagerAdapter(getSupportFragmentManager());
         mFragments.add(OrderListFragment1.newInstance());
@@ -68,6 +71,10 @@ public class OrderManagementActivity extends BaseActivity {
         mPagerSlidingTabStrip.setViewPager(mViewPager);
 
         initTabsValue();
+
+        if (mType == 1) {
+            mViewPager.setCurrentItem(1);
+        }
     }
 
     @Override
