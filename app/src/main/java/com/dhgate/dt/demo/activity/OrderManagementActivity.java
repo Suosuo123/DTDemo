@@ -1,14 +1,16 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.TypedValue;
+import android.view.View;
 
 import com.dhgate.dt.demo.R;
-import com.dhgate.dt.demo.fragment.AddProductFragment;
 import com.dhgate.dt.demo.fragment.OrderListFragment1;
 import com.dhgate.dt.demo.fragment.OrderListFragment2;
 import com.dhgate.dt.demo.utils.CommonUtils;
@@ -18,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import butterknife.OnClick;
+import butterknife.Optional;
 
 public class OrderManagementActivity extends BaseActivity {
 
@@ -32,6 +36,13 @@ public class OrderManagementActivity extends BaseActivity {
 
     @BindView(R.id.pager)
     public ViewPager mViewPager;
+
+    @Optional
+    @OnClick(R.id.iv_back)
+    public void backClick(View view) {
+        Intent intent = new Intent(mActivity, MyAccountActivity.class);
+        startActivity(intent);
+    }
 
     private MyPagerAdapter mPagerAdapter;
     private List<Fragment> mFragments = new ArrayList<>();
@@ -82,7 +93,7 @@ public class OrderManagementActivity extends BaseActivity {
         mPagerSlidingTabStrip.setSelectedTextColor(getResources().getColor(R.color.text_blue1));
         // 正常文字颜色
         mPagerSlidingTabStrip.setTextColor(getResources().getColor(R.color.text_gray));
-        mPagerSlidingTabStrip.setTextSize(CommonUtils.dip2pixel(mActivity,15));
+        mPagerSlidingTabStrip.setTextSize(CommonUtils.dip2pixel(mActivity, 15));
     }
 
     private class MyPagerAdapter extends FragmentPagerAdapter {

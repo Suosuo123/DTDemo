@@ -99,7 +99,7 @@ public class ExportBillActivity extends BaseActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 3000);
+        }, 1500);
     }
 
     private ExportBillProductListAdapter mAdapter;

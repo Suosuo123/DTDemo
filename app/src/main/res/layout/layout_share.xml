@@ -18,8 +18,8 @@
             android:id="@+id/iv_share_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:src="@mipmap/img_share" />
+            android:layout_marginTop="40dp"
+            android:src="@mipmap/img_share_logos" />
 
         <ImageView
             android:id="@+id/iv_close_share"
@@ -27,9 +27,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/iv_share_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="40dp"
             android:layout_marginTop="50dp"
-            android:src="@mipmap/icon_close" />
+            android:src="@mipmap/img_share_back" />
     </RelativeLayout>
 
 
