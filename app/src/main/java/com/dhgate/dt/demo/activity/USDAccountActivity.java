@@ -3,6 +3,9 @@ package com.dhgate.dt.demo.activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.dhgate.dt.demo.MainApplication;
 import com.dhgate.dt.demo.R;
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -18,6 +21,9 @@ public class USDAccountActivity extends BaseActivity {
 
     @BindView(R.id.click_img2)
     ImageView click_img2;
+
+    @BindView(R.id.account_balance)
+    TextView balance;
 
     @OnClick(R.id.btn_1)
     public void onBtn1Click() {
@@ -55,4 +61,9 @@ public class USDAccountActivity extends BaseActivity {
         setRightImg(R.mipmap.usd_account_8);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        balance.setText((MainApplication.getApplication()).getUsdBalanceStr());
+    }
 }
