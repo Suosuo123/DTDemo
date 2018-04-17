@@ -104,7 +104,7 @@ public class TransferActivity extends BaseActivity {
                     public void run() {
                         finish();
                     }
-                }, 3000);
+                }, 1500);
             }
         });
     }

@@ -39,7 +39,7 @@ public class SwapActivity2 extends BaseActivity {
             public void run() {
                 finish();
             }
-        }, 3000);
+        }, 1500);
     }
 
 
