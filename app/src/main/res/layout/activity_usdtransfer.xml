@@ -60,13 +60,28 @@
 
         </RelativeLayout>
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:background="@mipmap/usd_transfer_2"
             android:layout_below="@+id/input_content"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:id="@+id/transfer_amount_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/usd_transfer_2"
+                android:layout_centerVertical="true"/>
+            <TextView
+                android:id="@+id/transfer_amount_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="#6B7B94"
+                android:layout_toRightOf="@+id/transfer_amount_icon"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"/>
+        </RelativeLayout>
     </RelativeLayout>
 
     <LinearLayout

@@ -41,11 +41,23 @@
 
                 </RelativeLayout>
 
-                <ImageView
+                <RelativeLayout
                     android:id="@+id/myaccount_img_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@mipmap/myaccount_2"/>
+                    android:background="@mipmap/myaccount_2">
+                    
+                    <TextView
+                        android:id="@+id/account_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#3B3C3F"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100dp"/>
+
+
+                </RelativeLayout>
 
                 <ImageView
                     android:id="@+id/myaccount_img_3"

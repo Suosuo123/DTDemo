@@ -3,6 +3,8 @@ package com.dhgate.dt.demo;
 import android.app.Activity;
 import android.app.Application;
 
+import com.dhgate.dt.demo.utils.CommonUtils;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -12,6 +14,8 @@ public class MainApplication extends Application {
     public static MainApplication getApplication() {
         return mContext;
     }
+
+    public double balance = 50000;
 
     @Override
     public void onCreate() {
@@ -54,5 +58,17 @@ public class MainApplication extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public double getBalanceDouble() {
+        return this.balance;
+    }
+
+    public String getBalanceStr() {
+        return CommonUtils.to2(balance);
     }
 }
