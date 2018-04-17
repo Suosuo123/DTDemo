@@ -55,6 +55,13 @@
                 android:src="@mipmap/img_export_manage4" />
 
             <ImageView
+                android:id="@+id/iv_action7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@mipmap/img_export_manage7" />
+
+            <ImageView
                 android:id="@+id/iv_action5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

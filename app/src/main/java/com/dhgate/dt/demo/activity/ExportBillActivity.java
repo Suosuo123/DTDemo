@@ -1,6 +1,7 @@
 package com.dhgate.dt.demo.activity;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -76,7 +77,8 @@ public class ExportBillActivity extends BaseActivity {
 
     @OnClick(R.id.iv_cancel)
     public void cancelClick() {
-        finish();
+        ll_content1.setVisibility(View.VISIBLE);
+        ll_content2.setVisibility(View.GONE);
     }
 
     @OnClick(R.id.iv_complete)
@@ -92,6 +94,9 @@ public class ExportBillActivity extends BaseActivity {
                 if (mSuccessDialog != null) {
                     mSuccessDialog.dismiss();
                 }
+
+                Intent intent = new Intent(mActivity, ExportManagementActivity.class);
+                startActivity(intent);
                 finish();
             }
         }, 3000);

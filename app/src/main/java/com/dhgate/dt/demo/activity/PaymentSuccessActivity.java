@@ -1,6 +1,9 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
+
 import com.dhgate.dt.demo.R;
+
 import butterknife.OnClick;
 
 /**
@@ -11,12 +14,14 @@ public class PaymentSuccessActivity extends BaseActivity {
 
     @OnClick(R.id.check_order_icon)
     public void onCheckOrderClick() {
-
+        Intent intent = new Intent(mActivity, OrderManagementActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.return_icon)
     public void onReturnClick() {
-        finish();
+        Intent intent = new Intent(mActivity, MyAccountActivity.class);
+        startActivity(intent);
     }
 
     @Override

@@ -27,19 +27,29 @@ public class SelectContactActivity extends BaseActivity {
 
     private boolean isContactSelected;
 
+    //1:选择联系人  2：人脉管理
+    private int mType;
+
     @Override
     protected void onCreate() {
         super.onCreate();
-        setActionTitle("选择收货人");
 
+        mType = getIntent().getIntExtra("type", -1);
         isContactSelected = getIntent().getBooleanExtra("isContactSelected", false);
+
+        if (mType == 1) {
+            setActionTitle("选择联系人");
+        } else if (mType == 2) {
+            setActionTitle("人脉管理");
+        }
+
     }
 
     @Override
     protected void initView() {
         super.initView();
 
-        mAdapter = new SelectContactListAdapter(mActivity, lv_contact, isContactSelected);
+        mAdapter = new SelectContactListAdapter(mActivity, lv_contact, isContactSelected, mType);
         lv_contact.setAdapter(mAdapter);
         lv_contact.setChoiceMode(AbsListView.CHOICE_MODE_SINGLE);
 

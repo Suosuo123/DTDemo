@@ -67,6 +67,7 @@ public class MyAccountQRActivity extends BaseActivity {
     @OnClick(R.id.layout_6)
     public void onLayout6Click() {
         Intent intent = new Intent(mActivity, SelectContactActivity.class);
+        intent.putExtra("type",2);
         startActivity(intent);
     }
 

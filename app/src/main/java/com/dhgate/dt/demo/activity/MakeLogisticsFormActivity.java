@@ -78,6 +78,7 @@ public class MakeLogisticsFormActivity extends BaseActivity {
     @OnClick(R.id.ll_select_contact)
     public void contactSelect() {
         Intent intent = new Intent(mActivity, SelectContactActivity.class);
+        intent.putExtra("type", 1);
         intent.putExtra("isContactSelected", isContactSelected);
         startActivityForResult(intent, OPEN_SELECT_CODE);
     }
@@ -85,6 +86,7 @@ public class MakeLogisticsFormActivity extends BaseActivity {
     @OnClick(R.id.ll_select_contact1)
     public void contact1Select() {
         Intent intent = new Intent(mActivity, SelectContactActivity.class);
+        intent.putExtra("type", 1);
         intent.putExtra("isContactSelected", isContactSelected);
         startActivityForResult(intent, OPEN_SELECT_CODE);
     }

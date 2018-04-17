@@ -210,6 +210,7 @@ public class CreateOrderActivity extends BaseActivity {
                     et_money.setText("¥" + s.toString());
                     et_money.setSelection(et_money.getText().toString().trim().length());
                 }
+
             }
 
             @Override
@@ -233,7 +234,13 @@ public class CreateOrderActivity extends BaseActivity {
                     ll_date_content.setVisibility(View.VISIBLE);
 
                     double balance = Double.parseDouble(tv_total.getText().toString().replace("¥", "")) - Double.parseDouble(et_money.getText().toString().replace("¥", ""));
-                    tv_balance.setText("¥" + balance);
+                    if (balance < 0) {
+                        et_money.setText(tv_total.getText().toString());
+                        et_money.setSelection(et_money.getText().length());
+                        tv_balance.setText("¥" + 0);
+                    } else {
+                        tv_balance.setText("¥" + balance);
+                    }
 
                     CommonUtils.hideInputMethod(mActivity);
 

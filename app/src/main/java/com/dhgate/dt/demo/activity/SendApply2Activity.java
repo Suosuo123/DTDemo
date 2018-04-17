@@ -37,7 +37,7 @@ public class SendApply2Activity extends BaseActivity {
 
     @OnClick(R.id.iv_success_back1)
     public void back1Click() {
-        Intent intent = new Intent(mActivity, MyAccountActivity.class);
+        Intent intent = new Intent(mActivity, OrderManagementActivity.class);
         startActivity(intent);
     }
 

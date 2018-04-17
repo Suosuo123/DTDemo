@@ -32,11 +32,14 @@ public class SelectContactListAdapter extends BaseAdapter {
 
     private boolean mIsContactSelected;
 
-    public SelectContactListAdapter(Context context, ListView listView, boolean isContactSelected) {
+    private int mType;
+
+    public SelectContactListAdapter(Context context, ListView listView, boolean isContactSelected, int type) {
         this.mContext = context;
         mInflater = LayoutInflater.from(mContext);
         mListView = listView;
         mIsContactSelected = isContactSelected;
+        mType = type;
     }
 
     public void bindData(List<Contact> list) {
@@ -99,6 +102,9 @@ public class SelectContactListAdapter extends BaseAdapter {
         vh.iv_content.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (mType != 1) {
+                    return;
+                }
                 if (position == 1) {
                     ((ImageView) v).setImageResource(R.mipmap.img_contact_selected);
                     ((SelectContactActivity) mContext).setResult(Activity.RESULT_OK);

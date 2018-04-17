@@ -1,5 +1,7 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
+
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.widget.WinToast;
 
@@ -12,11 +14,10 @@ public class ExportManagementActivity extends BaseActivity {
         return R.layout.activity_export_management;
     }
 
-    @OnClick(R.id.iv_action1)
+    @OnClick(R.id.iv_action7)
     public void start() {
-//        Intent intent = new Intent(mActivity, AddProductActivity.class);
-//        startActivity(intent);
-        WinToast.toast(mActivity, "发票");
+        Intent intent = new Intent(mActivity, WarehouseApplicationActivity.class);
+        startActivity(intent);
     }
 
     @Override
