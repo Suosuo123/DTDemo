@@ -3,7 +3,9 @@ package com.dhgate.dt.demo.activity;
 import android.content.Intent;
 import android.view.View;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
+import com.dhgate.dt.demo.MainApplication;
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.widget.slidingUpPanel.SlidingUpPanelLayout;
 
@@ -22,6 +24,11 @@ public class MyAccountActivity extends BaseActivity {
 
     @BindView(R.id.rel_complete_order)
     RelativeLayout rel_complete_order;
+
+    @BindView(R.id.account_balance)
+    TextView account_balance;
+
+    public MainApplication application;
 
     @OnClick(R.id.myaccount_img_2)
     public void onAccountClick() {
@@ -87,12 +94,19 @@ public class MyAccountActivity extends BaseActivity {
     protected void onCreate() {
         super.onCreate();
         setSwipeBackEnable(false);
+        application = (MainApplication) getApplication();
     }
 
     @Override
     protected void initView() {
         super.initView();
         initSlidingLayout();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        account_balance.setText(application.getBalanceStr());
     }
 
     private void initSlidingLayout() {
