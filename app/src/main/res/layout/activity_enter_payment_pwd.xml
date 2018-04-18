@@ -26,7 +26,6 @@
             android:layout_height="wrap_content"
             android:textSize="30sp"
             android:textColor="#387AD3"
-            android:text="123"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"/>
 

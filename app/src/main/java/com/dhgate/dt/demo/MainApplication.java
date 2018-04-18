@@ -15,7 +15,7 @@ public class MainApplication extends Application {
         return mContext;
     }
 
-    public double usd_balance = 50000;
+    public double usd_balance = 0;
     public double cny_balance = 0;
 
     @Override
