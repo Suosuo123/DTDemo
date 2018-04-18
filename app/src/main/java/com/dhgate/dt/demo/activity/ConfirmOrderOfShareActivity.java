@@ -25,6 +25,8 @@ public class ConfirmOrderOfShareActivity extends BaseActivity {
 
     @OnClick(R.id.btn_edit)
     public void editClick() {
+        Intent intent = new Intent(mActivity, CreateOrderActivity.class);
+        startActivity(intent);
     }
 
     @OnClick(R.id.btn_agree)
