@@ -41,6 +41,7 @@ public class ConfirmOrderOfShareActivity extends BaseActivity {
     @OnClick(R.id.btn_confirm)
     public void confirmClick() {
         Intent intent = new Intent(mActivity, EnterPaymentPwdActivity.class);
+        intent.putExtra(EnterPaymentPwdActivity.PAYMENT_AMOUNT, 7643.00);
         startActivity(intent);
     }
 

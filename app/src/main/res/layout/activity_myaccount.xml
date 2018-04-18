@@ -36,8 +36,8 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_centerHorizontal="true"
-                        android:background="@mipmap/user_img_icon"
-                        android:layout_marginTop="30dp"/>
+                        android:layout_marginTop="30dp"
+                        android:background="@mipmap/user_img_icon" />
 
                 </RelativeLayout>
 
@@ -46,58 +46,62 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@mipmap/myaccount_2">
-                    
+
                     <TextView
                         android:id="@+id/usd_balance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor="#3B3C3F"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="100dp"/>
+                        android:layout_marginLeft="100dp"
+                        android:textColor="#3B3C3F"
+                        android:textSize="18sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@mipmap/myaccount_12"
-                    android:layout_marginTop="20dp">
+                    android:layout_marginTop="20dp"
+                    android:background="@mipmap/myaccount_12">
+
                     <TextView
                         android:id="@+id/cny_balance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor="#6B7B94"
                         android:layout_centerVertical="true"
-                        android:layout_marginLeft="100dp"/>
+                        android:layout_marginLeft="100dp"
+                        android:textColor="#6B7B94"
+                        android:textSize="18sp" />
                 </RelativeLayout>
 
                 <ImageView
                     android:id="@+id/myaccount_img_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@mipmap/myaccount_13"/>
+                    android:background="@mipmap/myaccount_13" />
+
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp">
+
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true">
+
                         <ImageView
                             android:id="@+id/myaccount_img_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@mipmap/myaccount_5"/>
+                            android:background="@mipmap/myaccount_5" />
 
                         <ImageView
                             android:id="@+id/myaccount_img_5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:background="@mipmap/myaccount_6"
+                            android:layout_marginLeft="80dp"
                             android:layout_toRightOf="@+id/myaccount_img_4"
-                            android:layout_marginLeft="80dp"/>
+                            android:background="@mipmap/myaccount_6" />
                     </RelativeLayout>
                 </RelativeLayout>
             </LinearLayout>
@@ -123,9 +127,10 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@mipmap/myaccount_4"
-                android:layout_centerInParent="true"/>
+                android:layout_centerInParent="true"
+                android:background="@mipmap/myaccount_4" />
         </RelativeLayout>
+
         <include
             android:id="@+id/pay_content"
             layout="@layout/my_bisness_layout" />
