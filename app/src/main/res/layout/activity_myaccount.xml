@@ -48,23 +48,35 @@
                     android:background="@mipmap/myaccount_2">
                     
                     <TextView
-                        android:id="@+id/account_balance"
+                        android:id="@+id/usd_balance"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18sp"
                         android:textColor="#3B3C3F"
                         android:layout_centerVertical="true"
                         android:layout_marginLeft="100dp"/>
+                </RelativeLayout>
 
-
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/myaccount_12"
+                    android:layout_marginTop="20dp">
+                    <TextView
+                        android:id="@+id/cny_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#6B7B94"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100dp"/>
                 </RelativeLayout>
 
                 <ImageView
                     android:id="@+id/myaccount_img_3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@mipmap/myaccount_3"
-                    android:layout_marginTop="20dp"/>
+                    android:background="@mipmap/myaccount_13"/>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

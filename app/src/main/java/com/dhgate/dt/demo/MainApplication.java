@@ -15,7 +15,8 @@ public class MainApplication extends Application {
         return mContext;
     }
 
-    public double balance = 50000;
+    public double usd_balance = 50000;
+    public double cny_balance = 0;
 
     @Override
     public void onCreate() {
@@ -60,15 +61,27 @@ public class MainApplication extends Application {
         }
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setUsdBalance(double usd_balance) {
+        this.usd_balance = usd_balance;
     }
 
-    public double getBalanceDouble() {
-        return this.balance;
+    public double getUsdBalanceDouble() {
+        return this.usd_balance;
     }
 
-    public String getBalanceStr() {
-        return CommonUtils.to2(balance);
+    public String getUsdBalanceStr() {
+        return CommonUtils.to2(usd_balance);
+    }
+
+    public double getCnyBalanceDouble() {
+        return cny_balance;
+    }
+
+    public String getCnyBalanceStr() {
+        return CommonUtils.to2(cny_balance);
+    }
+
+    public void setCnyBalance(double cny_balance) {
+        this.cny_balance = cny_balance;
     }
 }
