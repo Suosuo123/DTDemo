@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.dhgate.dt.demo.R;
 import com.dhgate.dt.demo.activity.ExportManagementActivity;
+import com.dhgate.dt.demo.activity.OrderDetailActivity;
 import com.dhgate.dt.demo.adapter.OrderListAdapter2;
 import com.dhgate.dt.demo.entity.Order2;
 
@@ -51,10 +52,10 @@ public class OrderListFragment2 extends BaseFragment {
         lv_product.setAdapter(mAdapter);
         lv_product.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
 
-        Order2 order1 = new Order2("发票号/入仓号：001", "高捷零配件有限公司", "出库日期/到仓日期：2018/04/05", "¥336000.00", "文件制作", "自送");
-        Order2 order2 = new Order2("发票号/入仓号：002", "百汇自动配件有限公司", "出库日期/到仓日期：2018/04/01", "¥738000.00", "放行", "陆运");
-        Order2 order3 = new Order2("发票号/入仓号：003", "杰利皮具贸易有限公司", "出库日期/到仓日期：2018/03/03", "¥9830.00", "资金解冻申请", "海运");
-        Order2 order4 = new Order2("发票号/入仓号：004", "朗发家具贸易有限公司", "出库日期/到仓日期：2018/03/01", "¥900240.00", "完结", "空运");
+        Order2 order1 = new Order2("发票号/入仓号：001", "高捷零配件有限公司", "出库日期/到仓日期：2018/04/05", "¥336000.00", "查看", "自送");
+        Order2 order2 = new Order2("发票号/入仓号：002", "百汇自动配件有限公司", "出库日期/到仓日期：2018/04/01", "¥738000.00", "查看", "陆运");
+        Order2 order3 = new Order2("发票号/入仓号：003", "杰利皮具贸易有限公司", "出库日期/到仓日期：2018/03/03", "¥9830.00", "查看", "海运");
+        Order2 order4 = new Order2("发票号/入仓号：004", "朗发家具贸易有限公司", "出库日期/到仓日期：2018/03/01", "¥900240.00", "查看", "空运");
 
         mList.add(order1);
         mList.add(order2);
@@ -66,7 +67,7 @@ public class OrderListFragment2 extends BaseFragment {
         lv_product.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(mActivity, ExportManagementActivity.class);
+                Intent intent = new Intent(mActivity, OrderDetailActivity.class);
                 startActivity(intent);
             }
         });

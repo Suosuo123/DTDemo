@@ -12,9 +12,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.dhgate.dt.demo.R;
+import com.dhgate.dt.demo.activity.ConfirmOrderOfShareActivity;
 import com.dhgate.dt.demo.activity.PaymentActivity;
 import com.dhgate.dt.demo.activity.SendApply1Activity;
 import com.dhgate.dt.demo.entity.Order1;
+import com.dhgate.dt.demo.widget.WinToast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -91,13 +93,29 @@ public class OrderListAdapter1 extends BaseAdapter {
         @BindView(R.id.tv_action3)
         public TextView tv_action3;
 
+
         @OnClick(R.id.tv_action2)
-        public void payClick() {
-            if (tv_action2.getText().equals("付款")) {
-                Intent intent = new Intent(mContext, PaymentActivity.class);
+        public void action2Click() {
+            if (tv_action2.getText().equals("确认")) {
+                Intent intent = new Intent(mContext, ConfirmOrderOfShareActivity.class);
                 mContext.startActivity(intent);
             } else if (tv_action2.getText().equals("送仓申请")) {
                 Intent intent = new Intent(mContext, SendApply1Activity.class);
+                mContext.startActivity(intent);
+            } else if (tv_action2.getText().equals("催交货")) {
+                WinToast.toast(mContext, "催交货消息发送成功！");
+            } else if (tv_action2.getText().equals("同意")) {
+                Intent intent = new Intent(mContext, ConfirmOrderOfShareActivity.class);
+                intent.putExtra("type", 1);
+                mContext.startActivity(intent);
+            }
+        }
+
+        @OnClick(R.id.tv_action3)
+        public void action3Click() {
+            if (tv_action3.getText().equals("拒绝")) {
+                Intent intent = new Intent(mContext, ConfirmOrderOfShareActivity.class);
+                intent.putExtra("type", 1);
                 mContext.startActivity(intent);
             }
         }
