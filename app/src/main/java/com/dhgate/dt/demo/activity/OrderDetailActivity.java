@@ -17,6 +17,12 @@ public class OrderDetailActivity extends BaseActivity {
         return R.layout.activity_order_detail;
     }
 
+    @BindView(R.id.iv_content_image1)
+    public ImageView iv_content_image1;
+
+    @BindView(R.id.iv_content_image2)
+    public ImageView iv_content_image2;
+
     @BindView(R.id.ll_more)
     public LinearLayout ll_more;
 
@@ -42,10 +48,33 @@ public class OrderDetailActivity extends BaseActivity {
 
     private boolean isOpen = false;
 
+    private int mType;
+
     @Override
     protected void onCreate() {
         super.onCreate();
 
+        mType = getIntent().getIntExtra("type", -1);
+
         setActionTitle("查看订单");
+
+    }
+
+    @Override
+    protected void initView() {
+        super.initView();
+
+        if (mType == 1) {
+            iv_content_image1.setVisibility(View.GONE);
+            iv_content_image2.setVisibility(View.VISIBLE);
+        } else {
+            iv_content_image1.setVisibility(View.VISIBLE);
+            iv_content_image2.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    protected void initData() {
+        super.initData();
     }
 }

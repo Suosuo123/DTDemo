@@ -111,6 +111,8 @@ public class MyAccountActivity extends BaseActivity {
         super.onResume();
         usd_balance.setText(application.getUsdBalanceStr());
         cny_balance.setText(application.getCnyBalanceStr());
+
+        sliding_layout.setPanelState(SlidingUpPanelLayout.PanelState.COLLAPSED);
     }
 
     private void initSlidingLayout() {
