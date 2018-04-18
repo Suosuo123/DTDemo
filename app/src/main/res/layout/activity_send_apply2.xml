@@ -140,7 +140,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:scaleType="fitXY"
-                        android:src="@mipmap/img_success_back1" />
+                        android:src="@mipmap/img_success_back1"
+                        android:visibility="gone" />
 
                     <ImageView
                         android:id="@+id/iv_success_back2"
@@ -148,7 +149,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:scaleType="fitXY"
-                        android:src="@mipmap/img_success_back2" />
+                        android:src="@mipmap/img_back_to_home" />
 
                 </LinearLayout>
             </LinearLayout>
