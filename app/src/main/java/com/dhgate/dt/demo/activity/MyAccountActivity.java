@@ -25,8 +25,11 @@ public class MyAccountActivity extends BaseActivity {
     @BindView(R.id.rel_complete_order)
     RelativeLayout rel_complete_order;
 
-    @BindView(R.id.account_balance)
-    TextView account_balance;
+    @BindView(R.id.usd_balance)
+    TextView usd_balance;
+
+    @BindView(R.id.cny_balance)
+    TextView cny_balance;
 
     public MainApplication application;
 
@@ -106,7 +109,8 @@ public class MyAccountActivity extends BaseActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        account_balance.setText(application.getBalanceStr());
+        usd_balance.setText(application.getUsdBalanceStr());
+        cny_balance.setText(application.getCnyBalanceStr());
     }
 
     private void initSlidingLayout() {
