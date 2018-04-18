@@ -1,5 +1,6 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -8,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.dhgate.dt.demo.MainApplication;
 import com.dhgate.dt.demo.R;
 
 import butterknife.BindView;
@@ -33,11 +35,26 @@ public class SwapActivity2 extends BaseActivity {
 
     @OnClick(R.id.confirm_btn_blue)
     public void onConfirmBtnClick() {
+        MainApplication application = (MainApplication) getApplication();
+        String swapAmount = usd_et.getText().toString();
+        double swapUsd = Double.parseDouble(swapAmount);
+        double swapCny = swapUsd * 6.21;
+
+        double usdBalance = application.getUsdBalanceDouble();
+        double leftUsdBalance = usdBalance - swapUsd;
+
+        double cnyBalance = application.getCnyBalanceDouble();
+        double leftCnyBalance = cnyBalance + swapCny;
+
+        application.setUsdBalance(leftUsdBalance);
+        application.setCnyBalance(leftCnyBalance);
+
         swap_success_layout.setVisibility(View.VISIBLE);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                finish();
+                Intent intent = new Intent(SwapActivity2.this, MyAccountActivity.class);
+                startActivity(intent);
             }
         }, 1500);
     }

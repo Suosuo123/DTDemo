@@ -10,10 +10,10 @@ import butterknife.OnClick;
 
 public class PersonalInfoActivity extends BaseActivity {
 
-    @OnClick(R.id.confirm_btn)
-    public void onConfirmBtnClick() {
-        finish();
-    }
+//    @OnClick(R.id.confirm_btn)
+//    public void onConfirmBtnClick() {
+//        finish();
+//    }
 
     @Override
     protected int getLayoutId() {

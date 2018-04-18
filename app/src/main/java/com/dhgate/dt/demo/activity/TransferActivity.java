@@ -1,5 +1,6 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -34,6 +36,9 @@ public class TransferActivity extends BaseActivity {
 
     @BindView(R.id.transfer_amount_text)
     TextView transfer_amount_text;
+
+    @BindView(R.id.usd_et)
+    EditText usd_et;
 
     LinearLayout ll_password;
 
@@ -86,7 +91,7 @@ public class TransferActivity extends BaseActivity {
     @Override
     protected void initView() {
         MainApplication application = (MainApplication) getApplication();
-        transfer_amount_text.setText(application.getBalanceStr());
+        transfer_amount_text.setText(application.getUsdBalanceStr());
         initShare();
         grid_password.setOnPasswordChangedListener(new GridPasswordView.OnPasswordChangedListener() {
             @Override
@@ -96,13 +101,23 @@ public class TransferActivity extends BaseActivity {
 
             @Override
             public void onInputFinish(String psw) {
+                MainApplication application = (MainApplication) getApplication();
+                String transferAmount = usd_et.getText().toString();
+                double transferAmountDouble = Double.parseDouble(transferAmount);
+
+                double usdBalance = application.getUsdBalanceDouble();
+                double leftUsdBalance = usdBalance - transferAmountDouble;
+
+                application.setUsdBalance(leftUsdBalance);
+
                 ll_password.setVisibility(View.GONE);
                 iv_transfer_success.setVisibility(View.VISIBLE);
                 CommonUtils.hideInputMethod(TransferActivity.this);
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        finish();
+                        Intent intent = new Intent(TransferActivity.this, MyAccountActivity.class);
+                        startActivity(intent);
                     }
                 }, 1500);
             }
