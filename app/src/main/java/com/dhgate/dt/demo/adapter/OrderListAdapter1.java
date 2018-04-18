@@ -95,7 +95,7 @@ public class OrderListAdapter1 extends BaseAdapter {
         public TextView tv_action3;
 
         @OnClick(R.id.tv_action2)
-        public void payClick() {
+        public void action2Click() {
             if (tv_action2.getText().equals("确认")) {
                 Intent intent = new Intent(mContext, ConfirmOrderOfShareActivity.class);
                 mContext.startActivity(intent);
@@ -110,6 +110,18 @@ public class OrderListAdapter1 extends BaseAdapter {
             } else if (tv_action2.getText().equals("同意") || tv_action2.getText().equals("拒绝")) {
                 Intent intent = new Intent(mContext, ConfirmOrderOfShareActivity.class);
                 intent.putExtra("type", 1);
+                mContext.startActivity(intent);
+            }
+        }
+
+        @OnClick(R.id.tv_action3)
+        public void action3Click() {
+            if (tv_action3.getText().equals("拒绝")) {
+                Intent intent = new Intent(mContext, ConfirmOrderOfShareActivity.class);
+                intent.putExtra("type", 1);
+                mContext.startActivity(intent);
+            } else if (tv_action3.getText().equals("修改")) {
+                Intent intent = new Intent(mContext, ConfirmOrderOfShareActivity.class);
                 mContext.startActivity(intent);
             }
         }
