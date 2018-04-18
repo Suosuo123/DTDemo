@@ -62,6 +62,8 @@ public class ConfirmOrderOfShareActivity extends BaseActivity {
                     mSuccessDialog.dismiss();
                 }
 
+                MainApplication.getApplication().setCnyBalance(7643.00);
+
                 Intent intent = new Intent(mActivity, MyAccountActivity.class);
                 startActivity(intent);
             }

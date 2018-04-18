@@ -88,7 +88,7 @@ public class OrderListFragment1 extends BaseFragment {
         lv_product.setAdapter(mAdapter);
         lv_product.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
 
-        Order1 order1 = new Order1("MOHAMED", "广州金行电子科技", "¥25475.00", "待确认", "确认", "拒绝");
+        Order1 order1 = new Order1("MOHAMED", "广州金行电子科技", "¥25475.00", "待确认", "确认", "修改");
         Order1 order2 = new Order1("请填写收货人名称", "高捷零配件有限公司", "¥15000.00", "定金已付", "送仓申请", "送仓延期");
         Order1 order3 = new Order1("请填写收货人名称", "天翼贸易有限公司", "¥386670.00", "备货中", "送仓申请", "送仓延期");
         Order1 order4 = new Order1("请填写收货人名称", "瑞亭贸易有限公司", "¥764000.00", "定金已付", "催交货", "");
