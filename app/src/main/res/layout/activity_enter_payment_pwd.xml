@@ -9,7 +9,7 @@
         android:id="@+id/rel_title"
         layout="@layout/layout_title_bar" />
 
-    <ImageView
+    <RelativeLayout
         android:id="@+id/payment_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,19 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="50dp"/>
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:id="@+id/payment_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="#387AD3"
+            android:text="123"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
 
     <com.jungly.gridpasswordview.GridPasswordView
         android:layout_below="@+id/payment_info"
