@@ -14,7 +14,7 @@ public class PaymentSuccessActivity extends BaseActivity {
 
     @OnClick(R.id.check_order_icon)
     public void onCheckOrderClick() {
-        Intent intent = new Intent(mActivity, OrderManagementActivity.class);
+        Intent intent = new Intent(mActivity, OrderDetailActivity.class);
         startActivity(intent);
     }
 

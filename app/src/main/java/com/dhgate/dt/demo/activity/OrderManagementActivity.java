@@ -56,6 +56,13 @@ public class OrderManagementActivity extends BaseActivity {
     }
 
     @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+
+        mType = intent.getIntExtra("type", -1);
+    }
+
+    @Override
     protected void initView() {
         super.initView();
 
@@ -72,14 +79,19 @@ public class OrderManagementActivity extends BaseActivity {
 
         initTabsValue();
 
-        if (mType == 1) {
-            mViewPager.setCurrentItem(1);
-        }
     }
 
     @Override
     protected void initData() {
         super.initData();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mType == 1) {
+            mViewPager.setCurrentItem(1);
+        }
     }
 
     /**
