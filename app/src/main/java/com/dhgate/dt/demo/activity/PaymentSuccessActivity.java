@@ -12,9 +12,15 @@ import butterknife.OnClick;
 
 public class PaymentSuccessActivity extends BaseActivity {
 
+    @Override
+    protected int getLayoutId() {
+        return R.layout.activity_payment_success;
+    }
+
     @OnClick(R.id.check_order_icon)
     public void onCheckOrderClick() {
         Intent intent = new Intent(mActivity, OrderDetailActivity.class);
+        intent.putExtra("type", 1);
         startActivity(intent);
     }
 
@@ -24,10 +30,6 @@ public class PaymentSuccessActivity extends BaseActivity {
         startActivity(intent);
     }
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.activity_payment_success;
-    }
 
     @Override
     protected void onCreate() {

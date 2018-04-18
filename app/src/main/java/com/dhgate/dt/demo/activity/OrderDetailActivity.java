@@ -1,5 +1,6 @@
 package com.dhgate.dt.demo.activity;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -8,6 +9,7 @@ import com.dhgate.dt.demo.R;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import butterknife.Optional;
 
 public class OrderDetailActivity extends BaseActivity {
 
@@ -38,6 +40,17 @@ public class OrderDetailActivity extends BaseActivity {
             ll_more.setVisibility(View.VISIBLE);
         }
         isOpen = !isOpen;
+    }
+
+    @Optional
+    @OnClick(R.id.iv_back)
+    public void backClick(View view) {
+        if (getIntent().getIntExtra("type", -1) == 1) {
+            Intent intent = new Intent(mActivity, MyAccountActivity.class);
+            startActivity(intent);
+        } else {
+            finish();
+        }
     }
 
     private boolean isOpen = false;
